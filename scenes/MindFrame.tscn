@@ -1,0 +1,203 @@
+[gd_scene format=3 uid="uid://dx5hcvqqoptjk"]
+
+[ext_resource type="Script" uid="uid://u6o131rpeuip" path="res://scripts/mind_frame.gd" id="1_bpioi"]
+[ext_resource type="Texture2D" uid="uid://go3sp51o5bpy" path="res://images/MindFrame_Background.png" id="2_1365o"]
+[ext_resource type="Texture2D" uid="uid://bs3u8han0sdh4" path="res://images/divider-fade-002.png" id="3_tldyc"]
+[ext_resource type="Texture2D" uid="uid://dug7hpj3cejmy" path="res://images/black.jpeg" id="4_dfu0a"]
+[ext_resource type="Texture2D" uid="uid://bll4n0cghqbf0" path="res://images/panel-transparent-center-009.png" id="5_0qgy6"]
+[ext_resource type="Texture2D" uid="uid://dv885gdv3c2qx" path="res://images/panel-border-027.png" id="6_olukc"]
+[ext_resource type="Texture2D" uid="uid://cc57plxdwmgow" path="res://images/x.png" id="7_cp46g"]
+[ext_resource type="Texture2D" uid="uid://bbdoa0bq7tane" path="res://images/—Pngtree—tea cup_19735035.png" id="8_ojyb7"]
+[ext_resource type="Texture2D" uid="uid://ch3lobapdbyui" path="res://images/Pillbottle.png" id="9_r4ra2"]
+[ext_resource type="Texture2D" uid="uid://bdkejhanrxvm0" path="res://images/journal.jpg" id="10_wewlf"]
+[ext_resource type="Texture2D" uid="uid://x0s2kthr0w6w" path="res://images/newspaper.jpeg" id="11_h8lk0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tumvk"]
+size = Vector2(222.68054, 227.36853)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4s8ks"]
+size = Vector2(4825.256, 3602.476)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5op7m"]
+size = Vector2(122, 197)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r1qq0"]
+size = Vector2(599, 180.5)
+
+[node name="MindFrame" type="Node2D" unique_id=1636084173]
+script = ExtResource("1_bpioi")
+
+[node name="MindFrameBackground" type="Sprite2D" parent="." unique_id=850894781]
+position = Vector2(-1.0000002, -4.9999995)
+scale = Vector2(2.2571619, 1.9052733)
+texture = ExtResource("2_1365o")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=289446866]
+
+[node name="Level Title" type="Label" parent="." unique_id=701874407]
+offset_left = -1699.0
+offset_top = -937.99994
+offset_right = -903.0
+offset_bottom = -768.99994
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 45
+text = "MindFrame (Case Musician)
+"
+
+[node name="DividerFade002" type="Sprite2D" parent="Level Title" unique_id=464175729]
+texture_filter = 3
+position = Vector2(289.12488, 80.8749)
+scale = Vector2(7.4973955, 5.024994)
+texture = ExtResource("3_tldyc")
+
+[node name="Level Description" type="Label" parent="Level Title" unique_id=464740465]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 122.99994
+offset_right = 744.0
+offset_bottom = 191.99994
+theme_override_colors/font_color = Color(0.8509804, 0.8666667, 0.8627451, 1)
+theme_override_font_sizes/font_size = 35
+text = "Investgate the victim's death"
+
+[node name="Black" type="Sprite2D" parent="." unique_id=419125623]
+visible = false
+position = Vector2(-1241.625, -3.875)
+scale = Vector2(3.4954545, 10.599726)
+texture = ExtResource("4_dfu0a")
+
+[node name="PanelTransparentCenter009" type="Sprite2D" parent="Black" unique_id=1775733003]
+visible = false
+texture_filter = 3
+position = Vector2(1.3270569, 1.316144)
+scale = Vector2(5.936118, 3.8598647)
+texture = ExtResource("5_0qgy6")
+
+[node name="PanelBorder027" type="Sprite2D" parent="Black" unique_id=52676131]
+visible = false
+texture_filter = 3
+position = Vector2(1.3231506, -0.011800051)
+scale = Vector2(5.8647585, 3.9034028)
+texture = ExtResource("6_olukc")
+
+[node name="X" type="Sprite2D" parent="Black" unique_id=634433147]
+position = Vector2(124.63112, -87.64922)
+scale = Vector2(0.09996248, 0.029832693)
+texture = ExtResource("7_cp46g")
+
+[node name="Area2D" type="Area2D" parent="Black/X" unique_id=493783270]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Black/X/Area2D" unique_id=1522839661]
+position = Vector2(-1.159668, -1.184082)
+shape = SubResource("RectangleShape2D_tumvk")
+
+[node name="Teacup_Area" type="Area2D" parent="." unique_id=1152417883]
+position = Vector2(-430, -237)
+scale = Vector2(0.042562515, 0.040500008)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Teacup_Area" unique_id=1413508128]
+position = Vector2(37638.754, 10962.961)
+shape = SubResource("RectangleShape2D_4s8ks")
+
+[node name="Teacup" type="Sprite2D" parent="Teacup_Area/CollisionShape2D" unique_id=518236462]
+visible = false
+position = Vector2(-56942.707, -19483.94)
+scale = Vector2(3.2958872, 2.9629624)
+texture = ExtResource("8_ojyb7")
+
+[node name="Teacup_Label" type="Label" parent="Teacup_Area/CollisionShape2D/Teacup" unique_id=380802688]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -2419.969
+offset_top = 641.97485
+offset_right = -1257.969
+offset_bottom = 2008.9749
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 500
+text = "The teacup was used 
+to kill the victim"
+
+[node name="Drug_Area" type="Area2D" parent="." unique_id=270004790]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drug_Area" unique_id=2144949367]
+position = Vector2(1380, 239)
+shape = SubResource("RectangleShape2D_5op7m")
+
+[node name="Pillbottle" type="Sprite2D" parent="Drug_Area/CollisionShape2D" unique_id=596967305]
+visible = false
+position = Vector2(-2629, -832.0625)
+scale = Vector2(0.1842448, 0.16963701)
+texture = ExtResource("9_r4ra2")
+
+[node name="Drug_Label" type="Label" parent="Drug_Area/CollisionShape2D/Pillbottle" unique_id=62260272]
+offset_left = -1508.3242
+offset_top = 2015.3037
+offset_right = 2739.8916
+offset_bottom = 3798.7583
+theme_override_font_sizes/font_size = 500
+text = "*add storyline"
+
+[node name="Journal_Area" type="Area2D" parent="." unique_id=1452800862]
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Journal_Area" unique_id=291562435]
+position = Vector2(-1327, 558)
+polygon = PackedVector2Array(137, 132, -187, 61, -408, 13, -406, -37, -172, -145, 80, -112, 102, -96, 148, -95, 403, -37)
+
+[node name="Journal" type="Sprite2D" parent="Journal_Area/CollisionShape2D" unique_id=1590984659]
+visible = false
+position = Vector2(113, -1155.0001)
+scale = Vector2(0.18027171, 0.16738528)
+texture = ExtResource("10_wewlf")
+
+[node name="Jornal_Label" type="Label" parent="Journal_Area/CollisionShape2D/Journal" unique_id=105661466]
+offset_left = -1769.551
+offset_top = 1816.1699
+offset_right = 1661.449
+offset_bottom = 2498.17
+theme_override_font_sizes/font_size = 500
+text = "*add storyline"
+
+[node name="Newspaper_Area" type="Area2D" parent="." unique_id=770512158]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Newspaper_Area" unique_id=1079295062]
+position = Vector2(-1309.5, 791.75)
+shape = SubResource("RectangleShape2D_r1qq0")
+
+[node name="Newspaper" type="Sprite2D" parent="Newspaper_Area/CollisionShape2D" unique_id=595068622]
+visible = false
+position = Vector2(72.5, -1399.75)
+scale = Vector2(2.5318182, 2.25)
+texture = ExtResource("11_h8lk0")
+
+[node name="Newspaper_Label" type="Label" parent="Newspaper_Area/CollisionShape2D/Newspaper" unique_id=2078162346]
+offset_left = -123.23159
+offset_top = 133.33334
+offset_right = 219.7684
+offset_bottom = 202.33336
+theme_override_font_sizes/font_size = 35
+text = "*add storyline"
+
+[node name="Exit_Area" type="Area2D" parent="." unique_id=1413276362]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Exit_Area" unique_id=1167666987]
+polygon = PackedVector2Array(1719, -952, 1709, 126, 1032, 110, 1046, 328, 1433, 403, 1503, 357, 1508, 178, 1687, 180, 1700, 887, -940, 869, -916, -940)
+
+[connection signal="input_event" from="Black/X/Area2D" to="." method="_default"]
+[connection signal="mouse_entered" from="Black/X/Area2D" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Black/X/Area2D" to="." method="_on_mouse_exited"]
+[connection signal="input_event" from="Teacup_Area" to="." method="_teacup_view"]
+[connection signal="mouse_entered" from="Teacup_Area" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Teacup_Area" to="." method="_on_mouse_exited"]
+[connection signal="input_event" from="Drug_Area" to="." method="_pillbottle_view"]
+[connection signal="mouse_entered" from="Drug_Area" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Drug_Area" to="." method="_on_mouse_exited"]
+[connection signal="input_event" from="Journal_Area" to="." method="_journal_view"]
+[connection signal="mouse_entered" from="Journal_Area" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Journal_Area" to="." method="_on_mouse_exited"]
+[connection signal="input_event" from="Newspaper_Area" to="." method="_newspaper_view"]
+[connection signal="mouse_entered" from="Newspaper_Area" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Newspaper_Area" to="." method="_on_mouse_exited"]
+[connection signal="input_event" from="Exit_Area" to="." method="_default"]

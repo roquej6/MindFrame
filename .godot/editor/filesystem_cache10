@@ -1,0 +1,21 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1780457953
+icon.svg::CompressedTexture2D::8788975586701849823::1780105507::1780457953::1::::<><><>0<>0<>55456c9b75c9f02b3e787edd08258545<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+README.md::TextFile::-1::1780457800::0::1::::<><><>0<>0<><>::
+::res://images/::1780457904
+black.jpeg::CompressedTexture2D::8577381437718695124::1780343566::1780457953::1::::<><><>0<>0<>f3d87282d0e44fb2eeb5097d4f94e9a2<>res://.godot/imported/black.jpeg-be6e0ed82a02c295342dff585d288d9f.ctex::
+divider-fade-002.png::CompressedTexture2D::6249498059428547783::1780360057::1780457953::1::::<><><>0<>0<>5a3b07cc9a164a08971b95ea300a0cc0<>res://.godot/imported/divider-fade-002.png-5a374c3b5654788f22301695ad9cbaa9.ctex::
+journal.jpg::CompressedTexture2D::2617890300541763821::1780357989::1780457957::1::::<><><>0<>0<>17fb75933b6cf13064dad421154fae86<>res://.godot/imported/journal.jpg-67d2b1e68fa6d5e76e5d682d268ebcbc.ctex::
+MindFrame_Background.png::CompressedTexture2D::451767405868375466::1780353718::1780457954::1::::<><><>0<>0<>cc620084af1a8815ec34e788a488f34e<>res://.godot/imported/MindFrame_Background.png-b6259c105cc51e8b355a4fbd6c036900.ctex::
+newspaper.jpeg::CompressedTexture2D::1667094524758027908::1780358503::1780457953::1::::<><><>0<>0<>dd73ab2348ea14f7173f023eeee279d5<>res://.godot/imported/newspaper.jpeg-0cb882ffd62eba11b856fa2bc64043e0.ctex::
+panel-005.png::CompressedTexture2D::3917646209278484511::1780109356::1780457953::1::::<><><>0<>0<>a60effaaa493d9a9aa98fe999125ead8<>res://.godot/imported/panel-005.png-79a93d49e5b13f5502ca833c5b690f0d.ctex::
+panel-border-027.png::CompressedTexture2D::3388240806616204244::1780108817::1780457953::1::::<><><>0<>0<>2ca626b1d416153fe3f64e04838b5d5b<>res://.godot/imported/panel-border-027.png-e280b78d04bef66f5891af749a2d3b5d.ctex::
+panel-transparent-center-009.png::CompressedTexture2D::5620602385652628965::1780109008::1780457953::1::::<><><>0<>0<>19365bad3b83403bc4daec8707b0a504<>res://.godot/imported/panel-transparent-center-009.png-72d1fe9e6a15d3e88d4aeb4c8e80d93b.ctex::
+Pillbottle.png::CompressedTexture2D::5322658791210160424::1780356465::1780457957::1::::<><><>0<>0<>985ffef72eb81b997399bc85db17c451<>res://.godot/imported/Pillbottle.png-db14d5f808f2ded18ab7efbd792d8d79.ctex::
+plant.jpeg::CompressedTexture2D::4223422207986338685::1780342713::1780457953::1::::<><><>0<>0<>6f8ffe04c859b65ddfb1adae219e08f9<>res://.godot/imported/plant.jpeg-e56b7086572982a97e7c2a12c501652c.ctex::
+x.png::CompressedTexture2D::4977120731414698346::1780343669::1780457953::1::::<><><>0<>0<>82bd16b056629f97a59427d7fe416ef4<>res://.godot/imported/x.png-ca7b68efb3541d6ce01eeb363f6c0d47.ctex::
+—Pngtree—tea cup_19735035.png::CompressedTexture2D::2463654013891078038::1780355099::1780457958::1::::<><><>0<>0<>aef3e5bbf283c50497018f23cd0760ad<>res://.godot/imported/—Pngtree—tea cup_19735035.png-abc932e17c18951f8db9a96a5c731eec.ctex::
+::res://scenes/::1780440207
+MindFrame.tscn::PackedScene::8835966506366527328::1780440207::0::1::::<><><>0<>0<><>::uid://u6o131rpeuip::::res://scripts/mind_frame.gd<>uid://go3sp51o5bpy::::res://images/MindFrame_Background.png<>uid://bs3u8han0sdh4::::res://images/divider-fade-002.png<>uid://dug7hpj3cejmy::::res://images/black.jpeg<>uid://bll4n0cghqbf0::::res://images/panel-transparent-center-009.png<>uid://dv885gdv3c2qx::::res://images/panel-border-027.png<>uid://cc57plxdwmgow::::res://images/x.png<>uid://bbdoa0bq7tane::::res://images/—Pngtree—tea cup_19735035.png<>uid://ch3lobapdbyui::::res://images/Pillbottle.png<>uid://bdkejhanrxvm0::::res://images/journal.jpg<>uid://x0s2kthr0w6w::::res://images/newspaper.jpeg
+::res://scripts/::1780429312
+mind_frame.gd::GDScript::1468670563288105247::1780429312::0::1::::<>Node2D<><>0<>0<><>::
