@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b4m8daxegdelq"
+path="res://.godot/imported/freesound_community-plastic-jug-61086.ogg-9435214614c03cb4dedf8c7a00be1981.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/(Ogg) Sound Effects and Audio/freesound_community-plastic-jug-61086.ogg"
+dest_files=["res://.godot/imported/freesound_community-plastic-jug-61086.ogg-9435214614c03cb4dedf8c7a00be1981.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

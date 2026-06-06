@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://00dgu8s2suiq"
+path="res://.godot/imported/freesound_community-pickup_item1-64283.ogg-5afc22884babed16a7a197c5f583bbc0.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/(Ogg) Sound Effects and Audio/freesound_community-pickup_item1-64283.ogg"
+dest_files=["res://.godot/imported/freesound_community-pickup_item1-64283.ogg-5afc22884babed16a7a197c5f583bbc0.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

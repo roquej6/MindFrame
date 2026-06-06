@@ -1,12 +1,36 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1780457953
+::res://::1780707446
 icon.svg::CompressedTexture2D::8788975586701849823::1780105507::1780457953::1::::<><><>0<>0<>55456c9b75c9f02b3e787edd08258545<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 README.md::TextFile::-1::1780457800::0::1::::<><><>0<>0<><>::
-::res://images/::1780457904
+::res://audio/::1780707472
+::res://audio/(Ogg) Sound Effects and Audio/::1780707466
+freesound_community-heavy-cloth-rustle-106346.ogg::AudioStreamOggVorbis::260902074028816412::1780707465::1780707466::1::::<><><>0<>0<>47e5f73459e5643fa35273d5635da47b<>res://.godot/imported/freesound_community-heavy-cloth-rustle-106346.ogg-f3977ac6ef0acdf379bd5b020bc3ee0f.oggvorbisstr::
+freesound_community-horror-ambience-17601.ogg::AudioStreamOggVorbis::4310336522566883438::1780707465::1780707466::1::::<><><>0<>0<>c2c13a863c0aa99d712b2093ac3df8b2<>res://.godot/imported/freesound_community-horror-ambience-17601.ogg-f239238fd7f497ee688236a7fd053d73.oggvorbisstr::
+freesound_community-pick-phone-up-down-1-33208.ogg::AudioStreamOggVorbis::7024994962278963784::1780707465::1780707466::1::::<><><>0<>0<>7d332a6888a2bda9b9330550c3c1626a<>res://.godot/imported/freesound_community-pick-phone-up-down-1-33208.ogg-32ceaba72b074155e3aed079b46f89d4.oggvorbisstr::
+freesound_community-pickup_item1-64283.ogg::AudioStreamOggVorbis::1806524502844230960::1780707465::1780707466::1::::<><><>0<>0<>93ef2fa1c3e579feec20bf8d7c2d4200<>res://.godot/imported/freesound_community-pickup_item1-64283.ogg-5afc22884babed16a7a197c5f583bbc0.oggvorbisstr::
+freesound_community-pickup_money_03-94972.ogg::AudioStreamOggVorbis::6140895988462169699::1780707465::1780707466::1::::<><><>0<>0<>11ce0b47acb12ecd76a2a28717f9c345<>res://.godot/imported/freesound_community-pickup_money_03-94972.ogg-1c96da12672a30d7e4d4fa86938656b5.oggvorbisstr::
+freesound_community-plastic-jug-61086.ogg::AudioStreamOggVorbis::4448678736108149710::1780707465::1780707466::1::::<><><>0<>0<>d16161674fd14bc37af0e2af9fd07a4a<>res://.godot/imported/freesound_community-plastic-jug-61086.ogg-9435214614c03cb4dedf8c7a00be1981.oggvorbisstr::
+freesound_community-plasticsack-88891.ogg::AudioStreamOggVorbis::1156024525211916471::1780707465::1780707466::1::::<><><>0<>0<>38d582f6c4843d5bf4aeb5eb4da24212<>res://.godot/imported/freesound_community-plasticsack-88891.ogg-169e43d5a0c99310d44866e533cc4f7f.oggvorbisstr::
+konstantinpazuzustudio-dark-horror-piano-488123.ogg::AudioStreamOggVorbis::2832512223891364533::1780707465::1780721658::1::::<><><>0<>0<>bbf4f9a6e2b249db62358e7811df1308<>res://.godot/imported/konstantinpazuzustudio-dark-horror-piano-488123.ogg-95f036b154335c9501e023275d8e33aa.oggvorbisstr::
+uisoundbay-teacup-clink-sfx-156224.ogg::AudioStreamOggVorbis::5071963484262600948::1780707465::1780707466::1::::<><><>0<>0<>b4cc41f93be945a63f1586d4b1a6833b<>res://.godot/imported/uisoundbay-teacup-clink-sfx-156224.ogg-e6091f65f2e1c67380e1840390f44b99.oggvorbisstr::
+universfield-dark-mystery-piano-161660.ogg::AudioStreamOggVorbis::3517105893654933888::1780707465::1780707466::1::::<><><>0<>0<>6eb11d284e8d6ff52dfb342e5270dd81<>res://.godot/imported/universfield-dark-mystery-piano-161660.ogg-f29d592bc8ea45eb24a87cfba4b2799a.oggvorbisstr::
+::res://audio/(Wav) Sound Effects and Audio/::1780707474
+freesound_community-heavy-cloth-rustle-106346.wav::AudioStreamWAV::8602730300765924937::1780707472::1780707473::1::::<><><>0<>0<>dda97bf07a4011c1c88ac0d55426074d<>res://.godot/imported/freesound_community-heavy-cloth-rustle-106346.wav-2f8820f11054f32bb4a5ef915f22da49.sample::
+freesound_community-horror-ambience-17601.wav::AudioStreamWAV::5054479262973299057::1780707472::1780707473::1::::<><><>0<>0<>f14ec2e18daa0c25eed7e7e1ed080f2a<>res://.godot/imported/freesound_community-horror-ambience-17601.wav-cdf67e351d7bddd55a4231e71ae0db43.sample::
+freesound_community-pick-phone-up-down-1-33208.wav::AudioStreamWAV::4444919892707885394::1780707472::1780707473::1::::<><><>0<>0<>d2a0410f238e0074ccafd7d6860b8b26<>res://.godot/imported/freesound_community-pick-phone-up-down-1-33208.wav-329c3074dd8df5963005042e8d6c6863.sample::
+freesound_community-pickup_item1-64283.wav::AudioStreamWAV::4386550583935878909::1780707472::1780707473::1::::<><><>0<>0<>528caff062d92c5fc1ea43e42d1c8199<>res://.godot/imported/freesound_community-pickup_item1-64283.wav-bd8cfc84e9f2a56539e1c67a9b27e034.sample::
+freesound_community-pickup_money_03-94972.wav::AudioStreamWAV::9043244981911003472::1780707472::1780707473::1::::<><><>0<>0<>6e2bf94c3fd0933c18692e1c97abc6c5<>res://.godot/imported/freesound_community-pickup_money_03-94972.wav-27ec15926ca52820beb61abaab912a90.sample::
+freesound_community-plastic-jug-61086.wav::AudioStreamWAV::8490940143797439888::1780707472::1780707473::1::::<><><>0<>0<>04c7941c312324c9da3b954d46fc15d8<>res://.godot/imported/freesound_community-plastic-jug-61086.wav-c31b18e30468d9256a137ed487b276ab.sample::
+freesound_community-plasticsack-88891.wav::AudioStreamWAV::7909617061397248692::1780707472::1780707473::1::::<><><>0<>0<>9c9e20f9c212bf609c79a6fbad45b1f5<>res://.godot/imported/freesound_community-plasticsack-88891.wav-5543aa7796c4351bfa56eec2ebc8cf01.sample::
+konstantinpazuzustudio-dark-horror-piano-488123.wav::AudioStreamWAV::8074957260110349679::1780707472::1780707474::1::::<><><>0<>0<>a0c1b9b33898e801ca6feee2eca06cc8<>res://.godot/imported/konstantinpazuzustudio-dark-horror-piano-488123.wav-c4a8bb8687267503cf7a5b439a6b4f0c.sample::
+uisoundbay-teacup-clink-sfx-156224.wav::AudioStreamWAV::2768005906378906765::1780707472::1780707473::1::::<><><>0<>0<>00f2f3e6f6b0c7c2e0fbbe252aec3e1f<>res://.godot/imported/uisoundbay-teacup-clink-sfx-156224.wav-570e42e41c8f283d9b9dbd0cc307bead.sample::
+universfield-dark-mystery-piano-161660.wav::AudioStreamWAV::5594095412081943670::1780707472::1780707473::1::::<><><>0<>0<>edae8553f7abbf81e9a569eff48b9dc3<>res://.godot/imported/universfield-dark-mystery-piano-161660.wav-178fa20c39733630e23a9b6db30f587b.sample::
+::res://images/::1780705087
 black.jpeg::CompressedTexture2D::8577381437718695124::1780343566::1780457953::1::::<><><>0<>0<>f3d87282d0e44fb2eeb5097d4f94e9a2<>res://.godot/imported/black.jpeg-be6e0ed82a02c295342dff585d288d9f.ctex::
 divider-fade-002.png::CompressedTexture2D::6249498059428547783::1780360057::1780457953::1::::<><><>0<>0<>5a3b07cc9a164a08971b95ea300a0cc0<>res://.godot/imported/divider-fade-002.png-5a374c3b5654788f22301695ad9cbaa9.ctex::
 journal.jpg::CompressedTexture2D::2617890300541763821::1780357989::1780457957::1::::<><><>0<>0<>17fb75933b6cf13064dad421154fae86<>res://.godot/imported/journal.jpg-67d2b1e68fa6d5e76e5d682d268ebcbc.ctex::
 MindFrame_Background.png::CompressedTexture2D::451767405868375466::1780353718::1780457954::1::::<><><>0<>0<>cc620084af1a8815ec34e788a488f34e<>res://.godot/imported/MindFrame_Background.png-b6259c105cc51e8b355a4fbd6c036900.ctex::
+MusicSheet.jpeg::CompressedTexture2D::7931917879398389336::1780705086::1780705087::1::::<><><>0<>0<>96aee5967777b50f730c975961fb4628<>res://.godot/imported/MusicSheet.jpeg-2d108dcebc7cdf6bc1d16442e35dc4c3.ctex::
 newspaper.jpeg::CompressedTexture2D::1667094524758027908::1780358503::1780457953::1::::<><><>0<>0<>dd73ab2348ea14f7173f023eeee279d5<>res://.godot/imported/newspaper.jpeg-0cb882ffd62eba11b856fa2bc64043e0.ctex::
 panel-005.png::CompressedTexture2D::3917646209278484511::1780109356::1780457953::1::::<><><>0<>0<>a60effaaa493d9a9aa98fe999125ead8<>res://.godot/imported/panel-005.png-79a93d49e5b13f5502ca833c5b690f0d.ctex::
 panel-border-027.png::CompressedTexture2D::3388240806616204244::1780108817::1780457953::1::::<><><>0<>0<>2ca626b1d416153fe3f64e04838b5d5b<>res://.godot/imported/panel-border-027.png-e280b78d04bef66f5891af749a2d3b5d.ctex::
@@ -15,7 +39,7 @@ Pillbottle.png::CompressedTexture2D::5322658791210160424::1780356465::1780457957
 plant.jpeg::CompressedTexture2D::4223422207986338685::1780342713::1780457953::1::::<><><>0<>0<>6f8ffe04c859b65ddfb1adae219e08f9<>res://.godot/imported/plant.jpeg-e56b7086572982a97e7c2a12c501652c.ctex::
 x.png::CompressedTexture2D::4977120731414698346::1780343669::1780457953::1::::<><><>0<>0<>82bd16b056629f97a59427d7fe416ef4<>res://.godot/imported/x.png-ca7b68efb3541d6ce01eeb363f6c0d47.ctex::
 —Pngtree—tea cup_19735035.png::CompressedTexture2D::2463654013891078038::1780355099::1780457958::1::::<><><>0<>0<>aef3e5bbf283c50497018f23cd0760ad<>res://.godot/imported/—Pngtree—tea cup_19735035.png-abc932e17c18951f8db9a96a5c731eec.ctex::
-::res://scenes/::1780440207
-MindFrame.tscn::PackedScene::8835966506366527328::1780440207::0::1::::<><><>0<>0<><>::uid://u6o131rpeuip::::res://scripts/mind_frame.gd<>uid://go3sp51o5bpy::::res://images/MindFrame_Background.png<>uid://bs3u8han0sdh4::::res://images/divider-fade-002.png<>uid://dug7hpj3cejmy::::res://images/black.jpeg<>uid://bll4n0cghqbf0::::res://images/panel-transparent-center-009.png<>uid://dv885gdv3c2qx::::res://images/panel-border-027.png<>uid://cc57plxdwmgow::::res://images/x.png<>uid://bbdoa0bq7tane::::res://images/—Pngtree—tea cup_19735035.png<>uid://ch3lobapdbyui::::res://images/Pillbottle.png<>uid://bdkejhanrxvm0::::res://images/journal.jpg<>uid://x0s2kthr0w6w::::res://images/newspaper.jpeg
-::res://scripts/::1780429312
-mind_frame.gd::GDScript::1468670563288105247::1780429312::0::1::::<>Node2D<><>0<>0<><>::
+::res://scenes/::1780721464
+MindFrame.tscn::PackedScene::8835966506366527328::1780721464::0::1::::<><><>0<>0<><>::uid://u6o131rpeuip::::res://scripts/mind_frame.gd<>uid://go3sp51o5bpy::::res://images/MindFrame_Background.png<>uid://dnbtmppmtfl6n::::res://audio/(Wav) Sound Effects and Audio/konstantinpazuzustudio-dark-horror-piano-488123.wav<>uid://cvbkk45lbmg4f::::res://images/divider-fade-002.png<>uid://dug7hpj3cejmy::::res://images/black.jpeg<>uid://bbdoa0bq7tane::::res://images/—Pngtree—tea cup_19735035.png<>uid://ch3lobapdbyui::::res://images/Pillbottle.png<>uid://bdkejhanrxvm0::::res://images/journal.jpg<>uid://x0s2kthr0w6w::::res://images/newspaper.jpeg<>uid://dlajr8clhdt6g::::res://images/MusicSheet.jpeg
+::res://scripts/::1780717347
+mind_frame.gd::GDScript::1468670563288105247::1780717347::0::1::::<>Node2D<><>0<>0<><>::

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bqdyhqtioiloy"
+path="res://.godot/imported/universfield-dark-mystery-piano-161660.ogg-f29d592bc8ea45eb24a87cfba4b2799a.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/(Ogg) Sound Effects and Audio/universfield-dark-mystery-piano-161660.ogg"
+dest_files=["res://.godot/imported/universfield-dark-mystery-piano-161660.ogg-f29d592bc8ea45eb24a87cfba4b2799a.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

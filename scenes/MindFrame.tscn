@@ -2,18 +2,18 @@
 
 [ext_resource type="Script" uid="uid://u6o131rpeuip" path="res://scripts/mind_frame.gd" id="1_bpioi"]
 [ext_resource type="Texture2D" uid="uid://go3sp51o5bpy" path="res://images/MindFrame_Background.png" id="2_1365o"]
-[ext_resource type="Texture2D" uid="uid://bs3u8han0sdh4" path="res://images/divider-fade-002.png" id="3_tldyc"]
+[ext_resource type="AudioStream" uid="uid://bgmdceigxbquv" path="res://audio/(Ogg) Sound Effects and Audio/konstantinpazuzustudio-dark-horror-piano-488123.ogg" id="2_n3ipa"]
+[ext_resource type="Texture2D" uid="uid://cvbkk45lbmg4f" path="res://images/divider-fade-002.png" id="3_tldyc"]
 [ext_resource type="Texture2D" uid="uid://dug7hpj3cejmy" path="res://images/black.jpeg" id="4_dfu0a"]
-[ext_resource type="Texture2D" uid="uid://bll4n0cghqbf0" path="res://images/panel-transparent-center-009.png" id="5_0qgy6"]
-[ext_resource type="Texture2D" uid="uid://dv885gdv3c2qx" path="res://images/panel-border-027.png" id="6_olukc"]
-[ext_resource type="Texture2D" uid="uid://cc57plxdwmgow" path="res://images/x.png" id="7_cp46g"]
+[ext_resource type="AudioStream" uid="uid://bfo3wgykeipar" path="res://audio/(Wav) Sound Effects and Audio/uisoundbay-teacup-clink-sfx-156224.wav" id="6_bpioi"]
 [ext_resource type="Texture2D" uid="uid://bbdoa0bq7tane" path="res://images/—Pngtree—tea cup_19735035.png" id="8_ojyb7"]
+[ext_resource type="AudioStream" uid="uid://d13u6nx4ik82g" path="res://audio/(Wav) Sound Effects and Audio/freesound_community-pickup_money_03-94972.wav" id="9_1365o"]
 [ext_resource type="Texture2D" uid="uid://ch3lobapdbyui" path="res://images/Pillbottle.png" id="9_r4ra2"]
 [ext_resource type="Texture2D" uid="uid://bdkejhanrxvm0" path="res://images/journal.jpg" id="10_wewlf"]
 [ext_resource type="Texture2D" uid="uid://x0s2kthr0w6w" path="res://images/newspaper.jpeg" id="11_h8lk0"]
+[ext_resource type="Texture2D" uid="uid://dlajr8clhdt6g" path="res://images/MusicSheet.jpeg" id="12_1365o"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tumvk"]
-size = Vector2(222.68054, 227.36853)
+[sub_resource type="Theme" id="Theme_x2skn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4s8ks"]
 size = Vector2(4825.256, 3602.476)
@@ -24,8 +24,19 @@ size = Vector2(122, 197)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r1qq0"]
 size = Vector2(599, 180.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bpioi"]
+size = Vector2(1514, 1903)
+
+[sub_resource type="Theme" id="Theme_n3ipa"]
+
 [node name="MindFrame" type="Node2D" unique_id=1636084173]
+position = Vector2(1740, 982)
 script = ExtResource("1_bpioi")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1509282377]
+stream = ExtResource("2_n3ipa")
+volume_db = 1.87
+autoplay = true
 
 [node name="MindFrameBackground" type="Sprite2D" parent="." unique_id=850894781]
 position = Vector2(-1.0000002, -4.9999995)
@@ -60,144 +71,527 @@ theme_override_colors/font_color = Color(0.8509804, 0.8666667, 0.8627451, 1)
 theme_override_font_sizes/font_size = 35
 text = "Investgate the victim's death"
 
-[node name="Black" type="Sprite2D" parent="." unique_id=419125623]
+[node name="UI_Display" type="Node2D" parent="." unique_id=1316797297]
 visible = false
-position = Vector2(-1241.625, -3.875)
-scale = Vector2(3.4954545, 10.599726)
-texture = ExtResource("4_dfu0a")
+position = Vector2(-1711, -950)
 
-[node name="PanelTransparentCenter009" type="Sprite2D" parent="Black" unique_id=1775733003]
-visible = false
-texture_filter = 3
-position = Vector2(1.3270569, 1.316144)
-scale = Vector2(5.936118, 3.8598647)
-texture = ExtResource("5_0qgy6")
+[node name="UI_Box" type="PanelContainer" parent="UI_Display" unique_id=1899794701]
+offset_right = 971.0
+offset_bottom = 1891.0
+theme = SubResource("Theme_x2skn")
 
-[node name="PanelBorder027" type="Sprite2D" parent="Black" unique_id=52676131]
-visible = false
-texture_filter = 3
-position = Vector2(1.3231506, -0.011800051)
-scale = Vector2(5.8647585, 3.9034028)
-texture = ExtResource("6_olukc")
+[node name="Black_Exit" type="Button" parent="UI_Display" unique_id=1878165542]
+offset_left = 865.0
+offset_top = 8.0
+offset_right = 962.0
+offset_bottom = 85.0
+theme_override_font_sizes/font_size = 50
+text = "x
+"
 
-[node name="X" type="Sprite2D" parent="Black" unique_id=634433147]
-position = Vector2(124.63112, -87.64922)
-scale = Vector2(0.09996248, 0.029832693)
-texture = ExtResource("7_cp46g")
+[node name="Evidence" type="Button" parent="UI_Display" unique_id=1902255952]
+offset_left = 469.0
+offset_top = 1803.0
+offset_right = 945.0
+offset_bottom = 1866.0
+theme_override_font_sizes/font_size = 40
+text = "Correlate from Evidence"
 
-[node name="Area2D" type="Area2D" parent="Black/X" unique_id=493783270]
+[node name="Interactable_Areas" type="Node2D" parent="." unique_id=2118535128]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Black/X/Area2D" unique_id=1522839661]
-position = Vector2(-1.159668, -1.184082)
-shape = SubResource("RectangleShape2D_tumvk")
-
-[node name="Teacup_Area" type="Area2D" parent="." unique_id=1152417883]
+[node name="Teacup_Area" type="Area2D" parent="Interactable_Areas" unique_id=1152417883]
 position = Vector2(-430, -237)
 scale = Vector2(0.042562515, 0.040500008)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Teacup_Area" unique_id=1413508128]
-position = Vector2(37638.754, 10962.961)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable_Areas/Teacup_Area" unique_id=1413508128]
+position = Vector2(37638.75, 10962.959)
 shape = SubResource("RectangleShape2D_4s8ks")
 
-[node name="Teacup" type="Sprite2D" parent="Teacup_Area/CollisionShape2D" unique_id=518236462]
+[node name="TeaCupAssets" type="Node2D" parent="Interactable_Areas/Teacup_Area/CollisionShape2D" unique_id=188261]
 visible = false
-position = Vector2(-56942.707, -19483.94)
-scale = Vector2(3.2958872, 2.9629624)
+
+[node name="Teacup" type="Sprite2D" parent="Interactable_Areas/Teacup_Area/CollisionShape2D/TeaCupAssets" unique_id=518236462]
+position = Vector2(-56942.703, -19483.938)
+scale = Vector2(3.295887, 2.9629624)
 texture = ExtResource("8_ojyb7")
 
-[node name="Teacup_Label" type="Label" parent="Teacup_Area/CollisionShape2D/Teacup" unique_id=380802688]
+[node name="Teacup_Title" type="Label" parent="Interactable_Areas/Teacup_Area/CollisionShape2D/TeaCupAssets" unique_id=1331305441]
 anchors_preset = 14
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -2419.969
-offset_top = 641.97485
-offset_right = -1257.969
-offset_bottom = 2008.9749
+offset_left = -60969.14
+offset_top = -13432.093
+offset_right = -52716.14
+offset_bottom = -10708.093
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 500
-text = "The teacup was used 
-to kill the victim"
+theme_override_font_sizes/font_size = 2000
+text = "Hot Tea"
 
-[node name="Drug_Area" type="Area2D" parent="." unique_id=270004790]
+[node name="Teacup_Description" type="Label" parent="Interactable_Areas/Teacup_Area/CollisionShape2D/TeaCupAssets" unique_id=380802688]
+visible = false
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -65174.72
+offset_top = -7086.4155
+offset_right = -45932.434
+offset_bottom = 172.84229
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 1200
+text = "The victim likes to drink his 
+homemade tea before he plays
+the piano"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Drug_Area" unique_id=2144949367]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Interactable_Areas/Teacup_Area" unique_id=15979651]
+stream = ExtResource("6_bpioi")
+
+[node name="Drug_Area" type="Area2D" parent="Interactable_Areas" unique_id=270004790]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable_Areas/Drug_Area" unique_id=2144949367]
 position = Vector2(1380, 239)
 shape = SubResource("RectangleShape2D_5op7m")
 
-[node name="Pillbottle" type="Sprite2D" parent="Drug_Area/CollisionShape2D" unique_id=596967305]
+[node name="PillBottleAssets" type="Node2D" parent="Interactable_Areas/Drug_Area/CollisionShape2D" unique_id=2138124066]
 visible = false
+
+[node name="Pillbottle" type="Sprite2D" parent="Interactable_Areas/Drug_Area/CollisionShape2D/PillBottleAssets" unique_id=596967305]
 position = Vector2(-2629, -832.0625)
 scale = Vector2(0.1842448, 0.16963701)
 texture = ExtResource("9_r4ra2")
 
-[node name="Drug_Label" type="Label" parent="Drug_Area/CollisionShape2D/Pillbottle" unique_id=62260272]
-offset_left = -1508.3242
-offset_top = 2015.3037
-offset_right = 2739.8916
-offset_bottom = 3798.7583
-theme_override_font_sizes/font_size = 500
-text = "*add storyline"
+[node name="Drug_Title" type="Label" parent="Interactable_Areas/Drug_Area/CollisionShape2D/PillBottleAssets" unique_id=740133660]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -3017.0
+offset_top = -576.0
+offset_right = -2233.0
+offset_bottom = -466.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 80
+text = "Heart Medication"
 
-[node name="Journal_Area" type="Area2D" parent="." unique_id=1452800862]
+[node name="Drug_Description" type="Label" parent="Interactable_Areas/Drug_Area/CollisionShape2D/PillBottleAssets" unique_id=62260272]
+visible = false
+offset_left = -2984.0
+offset_top = -318.0
+offset_right = -1988.0
+offset_bottom = 111.0
+theme_override_font_sizes/font_size = 50
+text = "He deliberatley stopped taking
+his medication for 2 weeks
+which ultimatley let to his
+cardiac arrest. Was this another
+suicide like his brother?"
 
-[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Journal_Area" unique_id=291562435]
+[node name="Journal_Area" type="Area2D" parent="Interactable_Areas" unique_id=1452800862]
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Interactable_Areas/Journal_Area" unique_id=291562435]
 position = Vector2(-1327, 558)
 polygon = PackedVector2Array(137, 132, -187, 61, -408, 13, -406, -37, -172, -145, 80, -112, 102, -96, 148, -95, 403, -37)
 
-[node name="Journal" type="Sprite2D" parent="Journal_Area/CollisionShape2D" unique_id=1590984659]
+[node name="JournalAssets" type="Node2D" parent="Interactable_Areas/Journal_Area/CollisionShape2D" unique_id=469790610]
 visible = false
-position = Vector2(113, -1155.0001)
+
+[node name="Journal" type="Sprite2D" parent="Interactable_Areas/Journal_Area/CollisionShape2D/JournalAssets" unique_id=1590984659]
+position = Vector2(84, -1116.0001)
 scale = Vector2(0.18027171, 0.16738528)
 texture = ExtResource("10_wewlf")
 
-[node name="Jornal_Label" type="Label" parent="Journal_Area/CollisionShape2D/Journal" unique_id=105661466]
-offset_left = -1769.551
-offset_top = 1816.1699
-offset_right = 1661.449
-offset_bottom = 2498.17
-theme_override_font_sizes/font_size = 500
-text = "*add storyline"
+[node name="Jornal_Titile" type="Label" parent="Interactable_Areas/Journal_Area/CollisionShape2D/JournalAssets" unique_id=105661466]
+offset_left = -183.0
+offset_top = -897.0
+offset_right = 367.0
+offset_bottom = -786.0
+theme_override_font_sizes/font_size = 80
+text = "Journal Entry"
 
-[node name="Newspaper_Area" type="Area2D" parent="." unique_id=770512158]
+[node name="Journal_Description" type="Label" parent="Interactable_Areas/Journal_Area/CollisionShape2D/JournalAssets" unique_id=292641312]
+visible = false
+offset_left = -275.0
+offset_top = -639.0
+offset_right = 557.6411
+offset_bottom = -197.04413
+theme_override_font_sizes/font_size = 50
+text = "A page was torn out from
+the journal. Reading through
+the book, it reveals that he had 
+a brother who died in a house fire"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Newspaper_Area" unique_id=1079295062]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Interactable_Areas/Journal_Area" unique_id=133577490]
+stream = ExtResource("9_1365o")
+
+[node name="Newspaper_Area" type="Area2D" parent="Interactable_Areas" unique_id=770512158]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable_Areas/Newspaper_Area" unique_id=1079295062]
 position = Vector2(-1309.5, 791.75)
 shape = SubResource("RectangleShape2D_r1qq0")
 
-[node name="Newspaper" type="Sprite2D" parent="Newspaper_Area/CollisionShape2D" unique_id=595068622]
+[node name="NewspaperAssets" type="Node2D" parent="Interactable_Areas/Newspaper_Area/CollisionShape2D" unique_id=2043107312]
 visible = false
-position = Vector2(72.5, -1399.75)
+
+[node name="Newspaper" type="Sprite2D" parent="Interactable_Areas/Newspaper_Area/CollisionShape2D/NewspaperAssets" unique_id=595068622]
+position = Vector2(71.5, -1359.7501)
 scale = Vector2(2.5318182, 2.25)
 texture = ExtResource("11_h8lk0")
 
-[node name="Newspaper_Label" type="Label" parent="Newspaper_Area/CollisionShape2D/Newspaper" unique_id=2078162346]
-offset_left = -123.23159
-offset_top = 133.33334
-offset_right = 219.7684
-offset_bottom = 202.33336
-theme_override_font_sizes/font_size = 35
-text = "*add storyline"
+[node name="Newspaper_Title" type="Label" parent="Interactable_Areas/Newspaper_Area/CollisionShape2D/NewspaperAssets" unique_id=2078162346]
+offset_left = -312.5
+offset_top = -1127.75
+offset_right = 461.5
+offset_bottom = -1017.75
+theme_override_font_sizes/font_size = 80
+text = "Unresolved incident"
 
-[node name="Exit_Area" type="Area2D" parent="." unique_id=1413276362]
+[node name="Newspaper_Description" type="Label" parent="Interactable_Areas/Newspaper_Area/CollisionShape2D/NewspaperAssets" unique_id=2025822745]
+visible = false
+offset_left = -293.5
+offset_top = -871.75
+offset_right = 431.5
+offset_bottom = -586.75
+theme_override_font_sizes/font_size = 50
+text = "A newspaper clipping about 
+a house fire which killed one 
+man. The report says that this
+was his way of commiting suicide
+but the reason for taking his own
+life is still a mystery
+"
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Exit_Area" unique_id=1167666987]
-polygon = PackedVector2Array(1719, -952, 1709, 126, 1032, 110, 1046, 328, 1433, 403, 1503, 357, 1508, 178, 1687, 180, 1700, 887, -940, 869, -916, -940)
+[node name="MusicSheet_Area" type="Area2D" parent="Interactable_Areas" unique_id=1029308708]
 
-[connection signal="input_event" from="Black/X/Area2D" to="." method="_default"]
-[connection signal="mouse_entered" from="Black/X/Area2D" to="." method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Black/X/Area2D" to="." method="_on_mouse_exited"]
-[connection signal="input_event" from="Teacup_Area" to="." method="_teacup_view"]
-[connection signal="mouse_entered" from="Teacup_Area" to="." method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Teacup_Area" to="." method="_on_mouse_exited"]
-[connection signal="input_event" from="Drug_Area" to="." method="_pillbottle_view"]
-[connection signal="mouse_entered" from="Drug_Area" to="." method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Drug_Area" to="." method="_on_mouse_exited"]
-[connection signal="input_event" from="Journal_Area" to="." method="_journal_view"]
-[connection signal="mouse_entered" from="Journal_Area" to="." method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Journal_Area" to="." method="_on_mouse_exited"]
-[connection signal="input_event" from="Newspaper_Area" to="." method="_newspaper_view"]
-[connection signal="mouse_entered" from="Newspaper_Area" to="." method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Newspaper_Area" to="." method="_on_mouse_exited"]
-[connection signal="input_event" from="Exit_Area" to="." method="_default"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Interactable_Areas/MusicSheet_Area" unique_id=1382143788]
+polygon = PackedVector2Array(518, -468, 641, -466, 795, -450, 709, -148, 580, -243, 432, -233)
+
+[node name="MusicSheetAssets" type="Node2D" parent="Interactable_Areas/MusicSheet_Area/CollisionPolygon2D" unique_id=1610542996]
+visible = false
+
+[node name="MusicSheet" type="Sprite2D" parent="Interactable_Areas/MusicSheet_Area/CollisionPolygon2D/MusicSheetAssets" unique_id=260355131]
+position = Vector2(-1259.0001, -571)
+scale = Vector2(2.13388, 1.4454546)
+texture = ExtResource("12_1365o")
+
+[node name="MusicSheet_Title" type="Label" parent="Interactable_Areas/MusicSheet_Area/CollisionPolygon2D/MusicSheetAssets" unique_id=1634269231]
+offset_left = -1477.0
+offset_top = -338.0
+offset_right = -1012.0
+offset_bottom = -228.0
+theme_override_font_sizes/font_size = 80
+text = "Music Sheet"
+
+[node name="MusicSheet_Description" type="Label" parent="Interactable_Areas/MusicSheet_Area/CollisionPolygon2D/MusicSheetAssets" unique_id=1850334857]
+visible = false
+offset_left = -1602.0
+offset_top = -81.0
+offset_right = -843.0
+offset_bottom = 176.0
+theme_override_font_sizes/font_size = 50
+text = "The song in the music sheet is
+Moonlight Sonota 3th Movment.
+This is the same song that a man
+was playing during a house fire 5 
+years ago.
+"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Interactable_Areas/MusicSheet_Area" unique_id=174688812]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -369.0
+offset_top = -478.0
+offset_right = 59.0
+offset_bottom = -273.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Exit_Area" type="Area2D" parent="Interactable_Areas" unique_id=1413276362]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionShape2D" parent="Interactable_Areas/Exit_Area" unique_id=602131875]
+position = Vector2(40, -5.5)
+shape = SubResource("RectangleShape2D_bpioi")
+
+[node name="Evidence" type="Node2D" parent="." unique_id=1756220975]
+visible = false
+
+[node name="Gathered" type="Control" parent="Evidence" unique_id=92786009]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 462.0
+offset_bottom = 505.0
+
+[node name="PanelContainer" type="PanelContainer" parent="Evidence/Gathered" unique_id=1078988276]
+layout_mode = 0
+offset_left = 525.0
+offset_top = -947.0
+offset_right = 1693.0
+offset_bottom = 935.0
+
+[node name="Label" type="Label" parent="Evidence/Gathered" unique_id=487606192]
+layout_mode = 0
+offset_left = 772.0
+offset_top = -865.0
+offset_right = 1498.0
+offset_bottom = -745.0
+theme_override_font_sizes/font_size = 80
+text = "Evidence Gathered"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Evidence/Gathered" unique_id=176235972]
+layout_mode = 0
+offset_left = 575.0
+offset_top = -699.0
+offset_right = 1656.0
+offset_bottom = 927.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Evidence/Gathered/ScrollContainer" unique_id=701215873]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_n3ipa")
+
+[node name="TextureRect" type="TextureRect" parent="Evidence/Gathered/ScrollContainer/VBoxContainer" unique_id=1438352736]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+texture = ExtResource("4_dfu0a")
+stretch_mode = 1
+
+[node name="Title" type="Label" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect" unique_id=1335186628]
+layout_mode = 0
+offset_left = 316.0
+offset_top = 40.0
+offset_right = 976.0
+offset_bottom = 209.0
+theme_override_font_sizes/font_size = 60
+text = "Cold Tea"
+
+[node name="Description" type="Label" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect" unique_id=1716915951]
+layout_mode = 0
+offset_left = 262.0
+offset_top = 155.0
+offset_right = 1063.0
+offset_bottom = 387.0
+theme_override_font_sizes/font_size = 40
+text = "A cup left untouched long enough for the
+milk to curlde up. Whatever happened 
+here interrupted his evening."
+
+[node name="Button" type="Button" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect" unique_id=1466185713]
+layout_mode = 0
+offset_left = 808.0
+offset_top = 388.0
+offset_right = 1057.0
+offset_bottom = 484.0
+theme_override_font_sizes/font_size = 45
+text = "Correlate
+"
+
+[node name="TeaCup" type="Sprite2D" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect" unique_id=1777295002]
+position = Vector2(138.00002, 242)
+scale = Vector2(0.05378127, 0.053750005)
+texture = ExtResource("8_ojyb7")
+
+[node name="TextureRect2" type="TextureRect" parent="Evidence/Gathered/ScrollContainer/VBoxContainer" unique_id=244762791]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+texture = ExtResource("4_dfu0a")
+stretch_mode = 1
+
+[node name="Title" type="Label" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect2" unique_id=191632545]
+layout_mode = 0
+offset_left = 316.0
+offset_top = 40.0
+offset_right = 976.0
+offset_bottom = 209.0
+theme_override_font_sizes/font_size = 60
+text = "Pill Bottle
+"
+
+[node name="Description" type="Label" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect2" unique_id=1075944395]
+layout_mode = 0
+offset_left = 262.0
+offset_top = 155.0
+offset_right = 1063.0
+offset_bottom = 387.0
+theme_override_font_sizes/font_size = 40
+text = "His heart medication remained completly
+full despite refil date two weeks prior. He
+has stopped taking his medication"
+
+[node name="Button" type="Button" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect2" unique_id=2023308920]
+layout_mode = 0
+offset_left = 808.0
+offset_top = 388.0
+offset_right = 1057.0
+offset_bottom = 484.0
+theme_override_font_sizes/font_size = 45
+text = "Correlate
+"
+
+[node name="Pillbottle" type="Sprite2D" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect2" unique_id=1867329328]
+position = Vector2(144.00006, 244)
+scale = Vector2(0.08882652, 0.092936195)
+texture = ExtResource("9_r4ra2")
+
+[node name="TextureRect3" type="TextureRect" parent="Evidence/Gathered/ScrollContainer/VBoxContainer" unique_id=460909611]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+texture = ExtResource("4_dfu0a")
+stretch_mode = 1
+
+[node name="Title" type="Label" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect3" unique_id=243913329]
+layout_mode = 0
+offset_left = 316.0
+offset_top = 40.0
+offset_right = 976.0
+offset_bottom = 209.0
+theme_override_font_sizes/font_size = 60
+text = "Torn piece of Paper"
+
+[node name="Description" type="Label" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect3" unique_id=24343659]
+layout_mode = 0
+offset_left = 262.0
+offset_top = 155.0
+offset_right = 1063.0
+offset_bottom = 387.0
+theme_override_font_sizes/font_size = 40
+text = "A piece of paper, seemgly torn from a
+note book of some sort. Why was it
+torn out?"
+
+[node name="Button" type="Button" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect3" unique_id=1777687412]
+layout_mode = 0
+offset_left = 808.0
+offset_top = 388.0
+offset_right = 1057.0
+offset_bottom = 484.0
+theme_override_font_sizes/font_size = 45
+text = "Correlate
+"
+
+[node name="Journal" type="Sprite2D" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect3" unique_id=208529295]
+position = Vector2(134, 239)
+scale = Vector2(0.056662325, 0.0741635)
+texture = ExtResource("10_wewlf")
+
+[node name="TextureRect4" type="TextureRect" parent="Evidence/Gathered/ScrollContainer/VBoxContainer" unique_id=1625715481]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+texture = ExtResource("4_dfu0a")
+stretch_mode = 1
+
+[node name="Title" type="Label" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect4" unique_id=1710138293]
+layout_mode = 0
+offset_left = 316.0
+offset_top = 40.0
+offset_right = 976.0
+offset_bottom = 209.0
+theme_override_font_sizes/font_size = 60
+text = "Newspaper"
+
+[node name="Description" type="Label" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect4" unique_id=1202145227]
+layout_mode = 0
+offset_left = 262.0
+offset_top = 155.0
+offset_right = 1063.0
+offset_bottom = 387.0
+theme_override_font_sizes/font_size = 40
+text = "Ripped out newspaper with a date found
+five years ago. Info about what the news
+is are unknown."
+
+[node name="Button" type="Button" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect4" unique_id=1784072662]
+layout_mode = 0
+offset_left = 808.0
+offset_top = 388.0
+offset_right = 1057.0
+offset_bottom = 484.0
+theme_override_font_sizes/font_size = 45
+text = "Correlate
+"
+
+[node name="Newspaper" type="Sprite2D" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect4" unique_id=43769668]
+position = Vector2(137.96864, 232.09378)
+scale = Vector2(0.8434089, 0.9627724)
+texture = ExtResource("11_h8lk0")
+
+[node name="TextureRect5" type="TextureRect" parent="Evidence/Gathered/ScrollContainer/VBoxContainer" unique_id=1579415217]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+texture = ExtResource("4_dfu0a")
+stretch_mode = 1
+
+[node name="Title" type="Label" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect5" unique_id=923771276]
+layout_mode = 0
+offset_left = 316.0
+offset_top = 40.0
+offset_right = 976.0
+offset_bottom = 209.0
+theme_override_font_sizes/font_size = 60
+text = "Music Sheet"
+
+[node name="Description" type="Label" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect5" unique_id=1068810433]
+layout_mode = 0
+offset_left = 262.0
+offset_top = 155.0
+offset_right = 1063.0
+offset_bottom = 387.0
+theme_override_font_sizes/font_size = 40
+text = "A note scribbled on the music
+sheet repeats the words 
+\"Im sorry. It's all my fault\""
+
+[node name="Button" type="Button" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect5" unique_id=429925656]
+layout_mode = 0
+offset_left = 808.0
+offset_top = 388.0
+offset_right = 1057.0
+offset_bottom = 484.0
+theme_override_font_sizes/font_size = 45
+text = "Correlate
+"
+
+[node name="MusicSheet" type="Sprite2D" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect5" unique_id=562205538]
+position = Vector2(136, 203)
+texture = ExtResource("12_1365o")
+
+[node name="Blurr" type="Node2D" parent="." unique_id=760362498]
+visible = false
+
+[node name="BackBufferCopy" type="BackBufferCopy" parent="Blurr" unique_id=463028875]
+
+[node name="ColorRect" type="ColorRect" parent="Blurr/BackBufferCopy" unique_id=1434491637]
+offset_left = -199.0
+offset_top = -766.0
+offset_right = 31.0
+offset_bottom = -575.0
+
+[connection signal="pressed" from="UI_Display/Black_Exit" to="." method="_clear_all"]
+[connection signal="pressed" from="UI_Display/Evidence" to="." method="_display_evidence"]
+[connection signal="input_event" from="Interactable_Areas/Teacup_Area" to="." method="_teacup_view"]
+[connection signal="mouse_entered" from="Interactable_Areas/Teacup_Area" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Interactable_Areas/Teacup_Area" to="." method="_on_mouse_exited"]
+[connection signal="input_event" from="Interactable_Areas/Drug_Area" to="." method="_pillbottle_view"]
+[connection signal="mouse_entered" from="Interactable_Areas/Drug_Area" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Interactable_Areas/Drug_Area" to="." method="_on_mouse_exited"]
+[connection signal="input_event" from="Interactable_Areas/Journal_Area" to="." method="_journal_view"]
+[connection signal="mouse_entered" from="Interactable_Areas/Journal_Area" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Interactable_Areas/Journal_Area" to="." method="_on_mouse_exited"]
+[connection signal="input_event" from="Interactable_Areas/Newspaper_Area" to="." method="_newspaper_view"]
+[connection signal="mouse_entered" from="Interactable_Areas/Newspaper_Area" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Interactable_Areas/Newspaper_Area" to="." method="_on_mouse_exited"]
+[connection signal="input_event" from="Interactable_Areas/MusicSheet_Area" to="." method="_musicsheet_view"]
+[connection signal="mouse_entered" from="Interactable_Areas/MusicSheet_Area" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Interactable_Areas/MusicSheet_Area" to="." method="_on_mouse_exited"]
+[connection signal="input_event" from="Interactable_Areas/Exit_Area" to="." method="_default"]
+[connection signal="pressed" from="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect/Button" to="." method="_teacup_des"]
+[connection signal="pressed" from="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect2/Button" to="." method="_pillbottle_des"]
+[connection signal="pressed" from="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect3/Button" to="." method="_journal_des"]
+[connection signal="pressed" from="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect4/Button" to="." method="_newspaper_des"]
+[connection signal="pressed" from="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect5/Button" to="." method="_musicsheet_des"]

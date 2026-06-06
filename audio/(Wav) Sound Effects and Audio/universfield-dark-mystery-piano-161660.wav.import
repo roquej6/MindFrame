@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://clx2604a1lex7"
+path="res://.godot/imported/universfield-dark-mystery-piano-161660.wav-178fa20c39733630e23a9b6db30f587b.sample"
+
+[deps]
+
+source_file="res://audio/(Wav) Sound Effects and Audio/universfield-dark-mystery-piano-161660.wav"
+dest_files=["res://.godot/imported/universfield-dark-mystery-piano-161660.wav-178fa20c39733630e23a9b6db30f587b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

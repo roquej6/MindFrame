@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bfo3wgykeipar"
+path="res://.godot/imported/uisoundbay-teacup-clink-sfx-156224.wav-570e42e41c8f283d9b9dbd0cc307bead.sample"
+
+[deps]
+
+source_file="res://audio/(Wav) Sound Effects and Audio/uisoundbay-teacup-clink-sfx-156224.wav"
+dest_files=["res://.godot/imported/uisoundbay-teacup-clink-sfx-156224.wav-570e42e41c8f283d9b9dbd0cc307bead.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

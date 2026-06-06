@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b2n7u3mwe3uyo"
+path="res://.godot/imported/freesound_community-horror-ambience-17601.ogg-f239238fd7f497ee688236a7fd053d73.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/(Ogg) Sound Effects and Audio/freesound_community-horror-ambience-17601.ogg"
+dest_files=["res://.godot/imported/freesound_community-horror-ambience-17601.ogg-f239238fd7f497ee688236a7fd053d73.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

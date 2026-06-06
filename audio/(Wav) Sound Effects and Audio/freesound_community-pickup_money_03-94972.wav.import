@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d13u6nx4ik82g"
+path="res://.godot/imported/freesound_community-pickup_money_03-94972.wav-27ec15926ca52820beb61abaab912a90.sample"
+
+[deps]
+
+source_file="res://audio/(Wav) Sound Effects and Audio/freesound_community-pickup_money_03-94972.wav"
+dest_files=["res://.godot/imported/freesound_community-pickup_money_03-94972.wav-27ec15926ca52820beb61abaab912a90.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://qp8s4vard7vf"
+path="res://.godot/imported/freesound_community-plasticsack-88891.ogg-169e43d5a0c99310d44866e533cc4f7f.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/(Ogg) Sound Effects and Audio/freesound_community-plasticsack-88891.ogg"
+dest_files=["res://.godot/imported/freesound_community-plasticsack-88891.ogg-169e43d5a0c99310d44866e533cc4f7f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
