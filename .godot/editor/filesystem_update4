@@ -1,2 +1,4 @@
-res://scripts/mind_frame.gd
+res://improved_background.tscn
+res://interactable_areas.gd
 res://scenes/MindFrame.tscn
+res://improved_background.gd

@@ -150,6 +150,7 @@ func _pillbottle_des() -> void:
 func _journal_des() -> void:
 	$Interactable_Areas/Journal_Area/CollisionShape2D/JournalAssets/Journal_Description.visible = true
 	journal = true
+	$Interactable_Areas/Journal_Area/CollisionShape2D/JournalAssets/Journal_Hint.visible = false
 	$Evidence.visible = false
 
 

@@ -1,0 +1,1339 @@
+[gd_scene format=3 uid="uid://dh8kbhthdsvbf"]
+
+[ext_resource type="Texture2D" uid="uid://dkl0lbieov6m2" path="res://images/new_bg1.png" id="1_f46ha"]
+[ext_resource type="Script" uid="uid://jukrhs585dgr" path="res://improved_background.gd" id="1_vc77n"]
+[ext_resource type="Texture2D" uid="uid://gnhfkhdc1owg" path="res://images/new_bg1_glitch.png" id="2_52fo8"]
+[ext_resource type="AudioStream" uid="uid://dnbtmppmtfl6n" path="res://audio/(Wav) Sound Effects and Audio/konstantinpazuzustudio-dark-horror-piano-488123.wav" id="2_m84hj"]
+[ext_resource type="Texture2D" uid="uid://cvbkk45lbmg4f" path="res://images/divider-fade-002.png" id="3_dq0kx"]
+[ext_resource type="Texture2D" uid="uid://dug7hpj3cejmy" path="res://images/black.jpeg" id="4_ju1kl"]
+[ext_resource type="Texture2D" uid="uid://cg3p6xlthwpb" path="res://images/add-circle-svgrepo-com (1).svg" id="5_akp0n"]
+[ext_resource type="Script" uid="uid://c486yttjrl2vb" path="res://interactable_areas.gd" id="5_lwycs"]
+[ext_resource type="Texture2D" uid="uid://bbdoa0bq7tane" path="res://images/—Pngtree—tea cup_19735035.png" id="5_vc77n"]
+[ext_resource type="Texture2D" uid="uid://ch3lobapdbyui" path="res://images/Pillbottle.png" id="6_akp0n"]
+[ext_resource type="Texture2D" uid="uid://bdkejhanrxvm0" path="res://images/journal.jpg" id="7_hwre7"]
+[ext_resource type="Texture2D" uid="uid://x0s2kthr0w6w" path="res://images/newspaper.jpeg" id="8_lwycs"]
+[ext_resource type="Texture2D" uid="uid://bhk78oyglsi7h" path="res://images/teaTin2.png" id="8_m84hj"]
+[ext_resource type="Texture2D" uid="uid://dlajr8clhdt6g" path="res://images/MusicSheet.jpeg" id="9_l2grt"]
+[ext_resource type="Texture2D" uid="uid://dh8d37tnw4uru" path="res://images/foxglove.png" id="10_l2grt"]
+[ext_resource type="Texture2D" uid="uid://ci0tndbga4v2p" path="res://images/deskPlanner2.png" id="11_iuqmw"]
+[ext_resource type="Texture2D" uid="uid://djdespawihp2v" path="res://images/blurr.png" id="12_w36vh"]
+[ext_resource type="Texture2D" uid="uid://q5n6v03t3yu" path="res://images/Appoinment.png" id="17_2g1uf"]
+[ext_resource type="Texture2D" uid="uid://s0xn5itytqje" path="res://images/foreign_note.png" id="18_8r704"]
+[ext_resource type="Texture2D" uid="uid://lu0gfw86r4d4" path="res://images/journalEntry.png" id="19_8r704"]
+
+[sub_resource type="Theme" id="Theme_iuqmw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w36vh"]
+size = Vector2(140, 120.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kojn4"]
+size = Vector2(75, 134.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2g1uf"]
+size = Vector2(138, 411)
+
+[sub_resource type="Theme" id="Theme_8r704"]
+
+[node name="Improved_Background" type="Node2D" unique_id=1648367587]
+script = ExtResource("1_vc77n")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1162881153]
+stream = ExtResource("2_m84hj")
+volume_db = 1.87
+autoplay = true
+
+[node name="Timer" type="Timer" parent="." unique_id=1593670319]
+autostart = true
+
+[node name="Label" type="Label" parent="Timer" unique_id=1298413527]
+offset_left = 1326.0
+offset_top = 28.0
+offset_right = 2206.0
+offset_bottom = 218.0
+theme_override_font_sizes/font_size = 80
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="Timer" unique_id=689869415]
+anchors_preset = -1
+anchor_left = -0.015000001
+anchor_top = -0.009000001
+anchor_right = -0.015000001
+anchor_bottom = -0.009000001
+offset_left = 1318.84
+offset_top = 165.496
+offset_right = 2168.84
+offset_bottom = 228.496
+max_value = 5.0
+value = 5.0
+show_percentage = false
+
+[node name="Game Over" type="Label" parent="Timer" unique_id=381151943]
+visible = false
+offset_left = 611.0
+offset_top = 258.0
+offset_right = 2985.0
+offset_bottom = 600.0
+theme_override_font_sizes/font_size = 250
+text = "Time Limit Reached"
+
+[node name="Label" type="Label" parent="Timer/Game Over" unique_id=1432269981]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 420.0
+offset_right = 2181.0
+offset_bottom = 654.0
+theme_override_font_sizes/font_size = 100
+text = "Mind Dive Unsuccessful"
+horizontal_alignment = 1
+
+[node name="NewBg1" type="Sprite2D" parent="." unique_id=145882941]
+position = Vector2(1731.4999, 971.00006)
+scale = Vector2(2.0759568, 2.068013)
+texture = ExtResource("1_f46ha")
+
+[node name="NewBg1Glitch" type="Sprite2D" parent="." unique_id=347125546]
+position = Vector2(1736, 973.25)
+scale = Vector2(2.071, 2.071)
+texture = ExtResource("2_52fo8")
+
+[node name="Level Cleared" type="Label" parent="." unique_id=1949185540]
+visible = false
+offset_left = 902.0
+offset_top = -16.0
+offset_right = 2519.0
+offset_bottom = 383.0
+theme_override_font_sizes/font_size = 250
+text = "Level Cleared"
+
+[node name="Level Title" type="Label" parent="." unique_id=556699753]
+visible = false
+offset_left = 43.0
+offset_top = 35.0
+offset_right = 839.0
+offset_bottom = 204.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 45
+text = "MindFrame (Case Musician)
+"
+
+[node name="DividerFade002" type="Sprite2D" parent="Level Title" unique_id=2026562250]
+texture_filter = 3
+position = Vector2(289.12488, 80.8749)
+scale = Vector2(7.4973955, 5.024994)
+texture = ExtResource("3_dq0kx")
+
+[node name="Level Description" type="Label" parent="Level Title" unique_id=1084003145]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 122.99994
+offset_right = 744.0
+offset_bottom = 191.99994
+theme_override_colors/font_color = Color(0.8509804, 0.8666667, 0.8627451, 1)
+theme_override_font_sizes/font_size = 35
+text = "Investgate the victim's death"
+
+[node name="UI_Display" type="Node2D" parent="." unique_id=335590649]
+visible = false
+position = Vector2(-1711, -950)
+
+[node name="UI_Box" type="PanelContainer" parent="UI_Display" unique_id=769537959]
+offset_left = 1742.0
+offset_top = 977.0
+offset_right = 2713.0
+offset_bottom = 2868.0
+theme = SubResource("Theme_iuqmw")
+
+[node name="Black_Exit" type="Button" parent="UI_Display" unique_id=174333257]
+offset_left = 2604.0
+offset_top = 991.0
+offset_right = 2701.0
+offset_bottom = 1068.0
+theme_override_font_sizes/font_size = 50
+text = "x
+"
+
+[node name="Evidence" type="Button" parent="UI_Display" unique_id=1615474790]
+offset_left = 2217.0
+offset_top = 2781.0
+offset_right = 2693.0
+offset_bottom = 2844.0
+theme_override_font_sizes/font_size = 40
+text = "Correlate from Evidence"
+
+[node name="Interactable_Areas" type="Node2D" parent="." unique_id=1602237625]
+script = ExtResource("5_lwycs")
+
+[node name="TeaCup_Area" type="Area2D" parent="Interactable_Areas" unique_id=1845325544]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable_Areas/TeaCup_Area" unique_id=969261647]
+position = Vector2(2406, 1167.75)
+shape = SubResource("RectangleShape2D_w36vh")
+
+[node name="TeaCupAssets" type="Node2D" parent="Interactable_Areas/TeaCup_Area/CollisionShape2D" unique_id=1986960952]
+visible = false
+
+[node name="Teacup" type="Sprite2D" parent="Interactable_Areas/TeaCup_Area/CollisionShape2D/TeaCupAssets" unique_id=1875756912]
+position = Vector2(-1887, -791.75006)
+scale = Vector2(0.102125034, 0.10687491)
+texture = ExtResource("5_vc77n")
+
+[node name="Blurr" type="Sprite2D" parent="Interactable_Areas/TeaCup_Area/CollisionShape2D/TeaCupAssets/Teacup" unique_id=1056665379]
+position = Vector2(161.5664, 107.60297)
+scale = Vector2(4.1787777, 3.1524146)
+texture = ExtResource("12_w36vh")
+
+[node name="Teacup_Title" type="Label" parent="Interactable_Areas/TeaCup_Area/CollisionShape2D/TeaCupAssets" unique_id=338905260]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -2099.0
+offset_top = -618.75
+offset_right = -1673.0
+offset_bottom = -447.75
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 100
+text = "Tea Cup"
+horizontal_alignment = 1
+
+[node name="TeaCup_Hint" type="Label" parent="Interactable_Areas/TeaCup_Area/CollisionShape2D/TeaCupAssets" unique_id=389082631]
+offset_left = -2280.0
+offset_top = -358.75
+offset_right = -1505.0
+offset_bottom = -285.75
+theme_override_font_sizes/font_size = 50
+text = "The tea cup appears empty"
+horizontal_alignment = 1
+
+[node name="_Des" type="Label" parent="Interactable_Areas/TeaCup_Area/CollisionShape2D/TeaCupAssets" unique_id=1282046322]
+visible = false
+offset_left = -2359.0
+offset_top = -200.75
+offset_right = -1352.0
+offset_bottom = 282.25
+theme_override_font_sizes/font_size = 50
+text = "Primary delivery method for the poison.
+Teabag still inside, steeped long enough
+to mask the bitter tatse of digitalis
+compount"
+
+[node name="TeaTin_Area" type="Area2D" parent="Interactable_Areas" unique_id=958502379]
+
+[node name="CollisionShape2D2" type="CollisionPolygon2D" parent="Interactable_Areas/TeaTin_Area" unique_id=503651658]
+position = Vector2(2723.5, 1175.25)
+polygon = PackedVector2Array(-99.5, 56.75, 36.5, 93.75, 101.5, 76.75, 105.5, -46.25, -52.5, -74.25, -96.5, -56.25)
+
+[node name="TeaTinAssets" type="Node2D" parent="Interactable_Areas/TeaTin_Area/CollisionShape2D2" unique_id=1038916974]
+visible = false
+
+[node name="Teacup" type="Sprite2D" parent="Interactable_Areas/TeaTin_Area/CollisionShape2D2/TeaTinAssets" unique_id=1420348324]
+position = Vector2(-2221.5, -840.25)
+scale = Vector2(0.35289896, 0.35136166)
+texture = ExtResource("8_m84hj")
+
+[node name="Blurr" type="Sprite2D" parent="Interactable_Areas/TeaTin_Area/CollisionShape2D2/TeaTinAssets/Teacup" unique_id=1758984447]
+position = Vector2(27.404114, -58.159714)
+scale = Vector2(1.1721678, 1.4801213)
+texture = ExtResource("12_w36vh")
+
+[node name="_Title" type="Label" parent="Interactable_Areas/TeaTin_Area/CollisionShape2D2/TeaTinAssets" unique_id=1668220631]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -2436.5
+offset_top = -616.25
+offset_right = -2010.5
+offset_bottom = -445.25
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 100
+text = "Loose-Leaf Tea Tin"
+horizontal_alignment = 1
+
+[node name="_Des" type="Label" parent="Interactable_Areas/TeaTin_Area/CollisionShape2D2/TeaTinAssets" unique_id=219652445]
+offset_left = -2608.5
+offset_top = -364.25
+offset_right = -1833.5
+offset_bottom = -291.25
+theme_override_font_sizes/font_size = 50
+text = "Points toward deliberate poisoning
+rather then accidental ingestion"
+horizontal_alignment = 1
+
+[node name="_Hint" type="Label" parent="Interactable_Areas/TeaTin_Area/CollisionShape2D2/TeaTinAssets" unique_id=41842238]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Journal_Area" type="Area2D" parent="Interactable_Areas" unique_id=1713723478]
+
+[node name="CollisionShape2D3" type="CollisionPolygon2D" parent="Interactable_Areas/Journal_Area" unique_id=1810176926]
+position = Vector2(-17, 1)
+polygon = PackedVector2Array(2886, 1308, 2804, 1454, 2562, 1414, 2324, 1371, 2466, 1238, 2654, 1251, 2684, 1272, 2884, 1299)
+
+[node name="JournalAssets" type="Node2D" parent="Interactable_Areas/Journal_Area/CollisionShape2D3" unique_id=743218552]
+visible = false
+
+[node name="_Title" type="Label" parent="Interactable_Areas/Journal_Area/CollisionShape2D3/JournalAssets" unique_id=2116486332]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 295.0
+offset_top = 756.0
+offset_right = 721.0
+offset_bottom = 927.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 100
+text = "Journal"
+horizontal_alignment = 1
+
+[node name="_Des" type="Label" parent="Interactable_Areas/Journal_Area/CollisionShape2D3/JournalAssets" unique_id=532573951]
+visible = false
+offset_left = 117.0
+offset_top = 1068.0
+offset_right = 980.0
+offset_bottom = 1425.0
+theme_override_font_sizes/font_size = 50
+text = "Paired with prescription bottle, 
+the call is what preceded Edmund's 
+decision to stop his taking
+his medicine
+"
+horizontal_alignment = 1
+
+[node name="_Hint" type="Label" parent="Interactable_Areas/Journal_Area/CollisionShape2D3/JournalAssets" unique_id=1338003002]
+offset_left = 163.0
+offset_top = 1065.0
+offset_right = 956.0
+offset_bottom = 1346.0
+theme_override_font_sizes/font_size = 50
+text = "A Journal with a page torn out."
+
+[node name="Journal" type="Sprite2D" parent="Interactable_Areas/Journal_Area/CollisionShape2D3/JournalAssets" unique_id=1991325477]
+position = Vector2(518, 429)
+scale = Vector2(0.18027171, 0.16738528)
+texture = ExtResource("7_hwre7")
+
+[node name="Blurr" type="Sprite2D" parent="Interactable_Areas/Journal_Area/CollisionShape2D3/JournalAssets/Journal" unique_id=99309264]
+position = Vector2(-22.188889, 116.49774)
+scale = Vector2(4.171221, 3.1913185)
+texture = ExtResource("12_w36vh")
+
+[node name="TornPage_Area" type="Area2D" parent="Interactable_Areas" unique_id=683987685]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable_Areas/TornPage_Area" unique_id=460221630]
+
+[node name="Assets" type="Node2D" parent="Interactable_Areas/TornPage_Area/CollisionShape2D" unique_id=907131200]
+
+[node name="_Title" type="Label" parent="Interactable_Areas/TornPage_Area/CollisionShape2D/Assets" unique_id=1792921868]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 271.0
+offset_top = 521.0
+offset_right = 697.0
+offset_bottom = 692.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 100
+text = "Torn Page"
+horizontal_alignment = 1
+
+[node name="_Des" type="Label" parent="Interactable_Areas/TornPage_Area/CollisionShape2D/Assets" unique_id=1024986154]
+offset_left = 151.0
+offset_top = 814.0
+offset_right = 926.0
+offset_bottom = 887.0
+theme_override_font_sizes/font_size = 50
+text = "abc"
+horizontal_alignment = 1
+
+[node name="PillBottle_Area" type="Area2D" parent="Interactable_Areas" unique_id=300317511]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable_Areas/PillBottle_Area" unique_id=313763567]
+position = Vector2(2552, 1166.875)
+shape = SubResource("RectangleShape2D_kojn4")
+
+[node name="PillBottleAssets" type="Node2D" parent="Interactable_Areas/PillBottle_Area/CollisionShape2D" unique_id=995864345]
+visible = false
+
+[node name="PillBottle" type="Sprite2D" parent="Interactable_Areas/PillBottle_Area/CollisionShape2D/PillBottleAssets" unique_id=1088797190]
+position = Vector2(-2065, -800.87506)
+scale = Vector2(0.102125034, 0.10687491)
+texture = ExtResource("6_akp0n")
+
+[node name="Blurr" type="Sprite2D" parent="Interactable_Areas/PillBottle_Area/CollisionShape2D/PillBottleAssets/PillBottle" unique_id=1348448304]
+position = Vector2(14.687988, 4.6791077)
+scale = Vector2(1.9794215, 2.4214206)
+texture = ExtResource("12_w36vh")
+
+[node name="_Title" type="Label" parent="Interactable_Areas/PillBottle_Area/CollisionShape2D/PillBottleAssets" unique_id=415629067]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -2271.0
+offset_top = -618.875
+offset_right = -1845.0
+offset_bottom = -447.875
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 100
+text = "Pill Bottle"
+horizontal_alignment = 1
+
+[node name="_Des" type="Label" parent="Interactable_Areas/PillBottle_Area/CollisionShape2D/PillBottleAssets" unique_id=548371921]
+visible = false
+offset_left = -2418.0
+offset_top = -361.875
+offset_right = -1643.0
+offset_bottom = -288.875
+theme_override_font_sizes/font_size = 50
+text = "The prescription bottle being
+full suggests he hasn't been 
+taking his medication."
+horizontal_alignment = 1
+
+[node name="_Hint" type="Label" parent="Interactable_Areas/PillBottle_Area/CollisionShape2D/PillBottleAssets" unique_id=991800269]
+offset_left = -2392.0
+offset_top = -353.875
+offset_right = -1643.0
+offset_bottom = -21.875
+theme_override_font_sizes/font_size = 50
+text = "An empty bottle of prescribed
+heart medication"
+horizontal_alignment = 1
+
+[node name="_Des2" type="Label" parent="Interactable_Areas/PillBottle_Area/CollisionShape2D/PillBottleAssets" unique_id=1354952615]
+visible = false
+offset_left = -2509.0
+offset_top = -137.875
+offset_right = -1589.0
+offset_bottom = 75.125
+theme_override_font_sizes/font_size = 50
+text = "He received a call three days before his
+death is what prompted Edmund's
+decision to stop using his medication.
+Stoppong was not neglect; it was 
+a response
+"
+horizontal_alignment = 1
+
+[node name="Note_Area" type="Area2D" parent="Interactable_Areas" unique_id=204845520]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable_Areas/Note_Area" unique_id=360009773]
+
+[node name="NoteAssets" type="Node2D" parent="Interactable_Areas/Note_Area/CollisionShape2D" unique_id=922265564]
+
+[node name="Teacup" type="Sprite2D" parent="Interactable_Areas/Note_Area/CollisionShape2D/NoteAssets" unique_id=1131410280]
+position = Vector2(482.99976, 321.99982)
+scale = Vector2(0.102125034, 0.10687491)
+texture = ExtResource("5_vc77n")
+
+[node name="_Title" type="Label" parent="Interactable_Areas/Note_Area/CollisionShape2D/NoteAssets" unique_id=132686453]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 302.0
+offset_top = 541.0
+offset_right = 728.0
+offset_bottom = 712.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 100
+text = "Sheet Music"
+horizontal_alignment = 1
+
+[node name="_Des" type="Label" parent="Interactable_Areas/Note_Area/CollisionShape2D/NoteAssets" unique_id=1441239845]
+offset_left = 113.0
+offset_top = 774.0
+offset_right = 888.0
+offset_bottom = 847.0
+theme_override_font_sizes/font_size = 50
+text = "A music sheet with hand writtern
+note enscribed \"I should have said 
+something. I'm sorry. I'm sorry\"
+"
+horizontal_alignment = 1
+
+[node name="_Hint" type="Label" parent="Interactable_Areas/Note_Area/CollisionShape2D/NoteAssets" unique_id=1991420728]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="NewsPaper_Area" type="Area2D" parent="Interactable_Areas" unique_id=50941849]
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Interactable_Areas/NewsPaper_Area" unique_id=2144088183]
+polygon = PackedVector2Array(1323, 1385, 1531, 1297, 1559, 1354, 1484, 1423, 1333, 1516)
+
+[node name="NewsPaperAssets" type="Node2D" parent="Interactable_Areas/NewsPaper_Area/CollisionShape2D" unique_id=82859180]
+visible = false
+
+[node name="_Title" type="Label" parent="Interactable_Areas/NewsPaper_Area/CollisionShape2D/NewsPaperAssets" unique_id=527654153]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 271.0
+offset_top = 521.0
+offset_right = 697.0
+offset_bottom = 692.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 100
+text = "News Paper"
+horizontal_alignment = 1
+
+[node name="_Des" type="Label" parent="Interactable_Areas/NewsPaper_Area/CollisionShape2D/NewsPaperAssets" unique_id=1974732698]
+offset_left = 151.0
+offset_top = 814.0
+offset_right = 926.0
+offset_bottom = 887.0
+theme_override_font_sizes/font_size = 50
+text = "abc"
+horizontal_alignment = 1
+
+[node name="_Hint" type="Label" parent="Interactable_Areas/NewsPaper_Area/CollisionShape2D/NewsPaperAssets" unique_id=1186077680]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Journal2_Area" type="Area2D" parent="Interactable_Areas" unique_id=789570802]
+
+[node name="Assets" type="Node2D" parent="Interactable_Areas/Journal2_Area" unique_id=1860226430]
+visible = false
+
+[node name="_Title" type="Label" parent="Interactable_Areas/Journal2_Area/Assets" unique_id=17061543]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 271.0
+offset_top = 521.0
+offset_right = 697.0
+offset_bottom = 692.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 100
+text = "Journal"
+horizontal_alignment = 1
+
+[node name="_Des" type="Label" parent="Interactable_Areas/Journal2_Area/Assets" unique_id=1326790417]
+offset_left = 151.0
+offset_top = 814.0
+offset_right = 926.0
+offset_bottom = 887.0
+theme_override_font_sizes/font_size = 50
+text = "abc"
+horizontal_alignment = 1
+
+[node name="Foxglove_Area" type="Area2D" parent="Interactable_Areas" unique_id=1188316976]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable_Areas/Foxglove_Area" unique_id=2003855335]
+position = Vector2(118, 567.5)
+shape = SubResource("RectangleShape2D_2g1uf")
+
+[node name="FoxgloveAssets" type="Node2D" parent="Interactable_Areas/Foxglove_Area/CollisionShape2D" unique_id=1263886682]
+visible = false
+
+[node name="_Title" type="Label" parent="Interactable_Areas/Foxglove_Area/CollisionShape2D/FoxgloveAssets" unique_id=32414182]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 4.0
+offset_top = 33.5
+offset_right = 776.0
+offset_bottom = 204.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 100
+text = "Potted Foxglove"
+horizontal_alignment = 1
+
+[node name="_Hint" type="Label" parent="Interactable_Areas/Foxglove_Area/CollisionShape2D/FoxgloveAssets" unique_id=1595059768]
+offset_left = -4.0
+offset_top = 289.5
+offset_right = 778.0
+offset_bottom = 430.5
+theme_override_font_sizes/font_size = 50
+text = "A foxglove plant appearing to be
+fully in tact"
+horizontal_alignment = 1
+
+[node name="_Des" type="Label" parent="Interactable_Areas/Foxglove_Area/CollisionShape2D/FoxgloveAssets" unique_id=718771453]
+visible = false
+offset_left = -64.0
+offset_top = 278.5
+offset_right = 845.0
+offset_bottom = 486.5
+theme_override_font_sizes/font_size = 50
+text = "The lower leaves looks like it was 
+forcefully taken out."
+horizontal_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Interactable_Areas/Foxglove_Area/CollisionShape2D/FoxgloveAssets" unique_id=1926028303]
+position = Vector2(374, -219.5)
+scale = Vector2(0.40771487, 0.36555997)
+texture = ExtResource("10_l2grt")
+
+[node name="Blurr" type="Sprite2D" parent="Interactable_Areas/Foxglove_Area/CollisionShape2D/FoxgloveAssets/Sprite2D" unique_id=1005172501]
+position = Vector2(27.404114, -58.159714)
+scale = Vector2(1.1721678, 1.4801213)
+texture = ExtResource("12_w36vh")
+
+[node name="_Des2" type="Label" parent="Interactable_Areas/Foxglove_Area/CollisionShape2D/FoxgloveAssets" unique_id=2114206231]
+visible = false
+offset_left = -64.0
+offset_top = 532.5
+offset_right = 845.0
+offset_bottom = 774.5
+theme_override_font_sizes/font_size = 50
+text = "The missing leafs was found in the
+Tea Tin that was regualry used
+by Edmund"
+horizontal_alignment = 1
+
+[node name="FramedPhoto_Area" type="Area2D" parent="Interactable_Areas" unique_id=1893799076]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Interactable_Areas/FramedPhoto_Area" unique_id=1174311294]
+polygon = PackedVector2Array(2077, 135, 2312, 102, 2274, 316, 2038, 327)
+
+[node name="UnopenedLetter_Area" type="Area2D" parent="Interactable_Areas" unique_id=220216645]
+
+[node name="CrossWord_Area" type="Area2D" parent="Interactable_Areas" unique_id=1735584330]
+
+[node name="MusicSheet_Area" type="Area2D" parent="Interactable_Areas" unique_id=1332778535]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Interactable_Areas/MusicSheet_Area" unique_id=154356791]
+polygon = PackedVector2Array(1777, 485, 2081, 494, 2021, 782, 1959, 774, 1961, 740, 1921, 696, 1878, 683, 1824, 684, 1803, 690, 1792, 700, 1762, 694, 1743, 699, 1734, 694)
+
+[node name="MusicTheory_Area" type="Area2D" parent="Interactable_Areas" unique_id=280879080]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Interactable_Areas/MusicTheory_Area" unique_id=575089695]
+polygon = PackedVector2Array(1252, 1114, 1415, 1188, 1097, 1256, 968, 1171)
+
+[node name="DeskPlanner_area" type="Area2D" parent="Interactable_Areas" unique_id=269789675]
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Interactable_Areas/DeskPlanner_area" unique_id=2043917959]
+position = Vector2(635.5, 919.75)
+polygon = PackedVector2Array(25.5, -30.75, -100.5, -18.75, -33.5, 29.25, 97.5, 13.25)
+
+[node name="DeskPlannerAssets" type="Node2D" parent="Interactable_Areas/DeskPlanner_area/CollisionShape2D" unique_id=1709742223]
+visible = false
+
+[node name="_Title" type="Label" parent="Interactable_Areas/DeskPlanner_area/CollisionShape2D/DeskPlannerAssets" unique_id=151484462]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -429.5
+offset_top = -283.75
+offset_right = 208.5
+offset_bottom = -112.75
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 100
+text = "Desk Planner"
+horizontal_alignment = 1
+
+[node name="_Des" type="Label" parent="Interactable_Areas/DeskPlanner_area/CollisionShape2D/DeskPlannerAssets" unique_id=361142462]
+visible = false
+offset_left = -518.5
+offset_top = 20.25
+offset_right = 293.5
+offset_bottom = 161.25
+theme_override_font_sizes/font_size = 50
+text = "Inside the planner, there is a date
+circled on the current month"
+horizontal_alignment = 1
+
+[node name="_Des2" type="Label" parent="Interactable_Areas/DeskPlanner_area/CollisionShape2D/DeskPlannerAssets" unique_id=776661059]
+visible = false
+offset_left = -503.5
+offset_top = 183.25
+offset_right = 271.5
+offset_bottom = 324.25
+theme_override_font_sizes/font_size = 50
+text = "The appointment card was for 
+his son's doctor's appointment.
+He was planning going 
+with his son"
+horizontal_alignment = 1
+
+[node name="_Hint" type="Label" parent="Interactable_Areas/DeskPlanner_area/CollisionShape2D/DeskPlannerAssets" unique_id=1051462630]
+offset_left = -490.5
+offset_top = 20.25
+offset_right = 284.5
+offset_bottom = 93.25
+theme_override_font_sizes/font_size = 50
+text = "Edmund regulary plans out his 
+montly itinerary"
+horizontal_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Interactable_Areas/DeskPlanner_area/CollisionShape2D/DeskPlannerAssets" unique_id=1291738066]
+position = Vector2(-165.5, -511.75003)
+scale = Vector2(0.5473633, 0.42985025)
+texture = ExtResource("11_iuqmw")
+
+[node name="Blurr" type="Sprite2D" parent="Interactable_Areas/DeskPlanner_area/CollisionShape2D/DeskPlannerAssets/Sprite2D" unique_id=663749448]
+position = Vector2(27.404114, -58.159714)
+scale = Vector2(1.1721678, 1.4801213)
+texture = ExtResource("12_w36vh")
+
+[node name="Appointment_Area" type="Area2D" parent="Interactable_Areas" unique_id=1679467164]
+
+[node name="Assets" type="Node2D" parent="Interactable_Areas/Appointment_Area" unique_id=1536068138]
+visible = false
+
+[node name="_Title" type="Label" parent="Interactable_Areas/Appointment_Area/Assets" unique_id=1860172853]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 78.0
+offset_top = 555.0
+offset_right = 970.0
+offset_bottom = 726.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 100
+text = "Appointment Card"
+horizontal_alignment = 1
+
+[node name="_Des" type="Label" parent="Interactable_Areas/Appointment_Area/Assets" unique_id=1786583689]
+offset_left = 151.0
+offset_top = 814.0
+offset_right = 926.0
+offset_bottom = 887.0
+theme_override_font_sizes/font_size = 50
+text = "A doctor's note"
+horizontal_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Interactable_Areas/Appointment_Area/Assets" unique_id=1060370694]
+position = Vector2(282, 279)
+scale = Vector2(0.41079813, 0.39873418)
+texture = ExtResource("17_2g1uf")
+
+[node name="Phone_Area" type="Area2D" parent="Interactable_Areas" unique_id=1568750153]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Interactable_Areas/Phone_Area" unique_id=700115432]
+polygon = PackedVector2Array(2815, 1289, 2986, 1336, 2985, 1360, 3144, 1313, 3144, 1278, 3179, 1270, 3181, 1230, 3169, 1196, 3105, 1166, 3034, 1135, 2954, 1123, 2891, 1128, 2869, 1143, 2854, 1161, 2857, 1181, 2914, 1181)
+
+[node name="Evidence" type="Node2D" parent="." unique_id=642367165]
+visible = false
+
+[node name="Gathered" type="Control" parent="Evidence" unique_id=339419610]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1737.0
+offset_top = 986.0
+offset_right = 2199.0
+offset_bottom = 1491.0
+
+[node name="PanelContainer" type="PanelContainer" parent="Evidence/Gathered" unique_id=418087030]
+layout_mode = 0
+offset_left = 525.0
+offset_top = -947.0
+offset_right = 1693.0
+offset_bottom = 935.0
+
+[node name="Label" type="Label" parent="Evidence/Gathered" unique_id=2049405767]
+layout_mode = 0
+offset_left = 772.0
+offset_top = -865.0
+offset_right = 1498.0
+offset_bottom = -745.0
+theme_override_font_sizes/font_size = 80
+text = "Evidence Gathered"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Evidence/Gathered" unique_id=790335872]
+layout_mode = 0
+offset_left = 575.0
+offset_top = -699.0
+offset_right = 1656.0
+offset_bottom = 927.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Evidence/Gathered/ScrollContainer" unique_id=1187632418]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_8r704")
+
+[node name="TextureRect" type="TextureRect" parent="Evidence/Gathered/ScrollContainer/VBoxContainer" unique_id=2078702976]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+texture = ExtResource("4_ju1kl")
+stretch_mode = 1
+
+[node name="Title" type="Label" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect" unique_id=918503612]
+layout_mode = 0
+offset_left = 316.0
+offset_top = 40.0
+offset_right = 976.0
+offset_bottom = 209.0
+theme_override_font_sizes/font_size = 60
+text = "Cold Tea"
+
+[node name="Description" type="Label" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect" unique_id=872594421]
+layout_mode = 0
+offset_left = 262.0
+offset_top = 155.0
+offset_right = 1063.0
+offset_bottom = 387.0
+theme_override_font_sizes/font_size = 40
+text = "A half empty cup with lip marks
+on the rim of the cup belnging
+to Edmund."
+
+[node name="Button" type="Button" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect" unique_id=1041559754]
+layout_mode = 0
+offset_left = 808.0
+offset_top = 388.0
+offset_right = 1057.0
+offset_bottom = 484.0
+theme_override_font_sizes/font_size = 45
+text = "Correlate
+"
+
+[node name="TeaCup" type="Sprite2D" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect" unique_id=1612974196]
+position = Vector2(138.00002, 242)
+scale = Vector2(0.05378127, 0.053750005)
+texture = ExtResource("5_vc77n")
+
+[node name="TextureRect2" type="TextureRect" parent="Evidence/Gathered/ScrollContainer/VBoxContainer" unique_id=386432434]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+texture = ExtResource("4_ju1kl")
+stretch_mode = 1
+
+[node name="Title" type="Label" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect2" unique_id=40662711]
+layout_mode = 0
+offset_left = 316.0
+offset_top = 40.0
+offset_right = 976.0
+offset_bottom = 209.0
+theme_override_font_sizes/font_size = 60
+text = "Prescribed Meds
+"
+
+[node name="Description" type="Label" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect2" unique_id=677396600]
+layout_mode = 0
+offset_left = 262.0
+offset_top = 155.0
+offset_right = 1063.0
+offset_bottom = 387.0
+theme_override_font_sizes/font_size = 40
+text = "Heart Medication prescribed for Edmund's
+known cardiac condistion. Bottle is still
+full
+"
+
+[node name="Button" type="Button" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect2" unique_id=1034900271]
+layout_mode = 0
+offset_left = 808.0
+offset_top = 388.0
+offset_right = 1057.0
+offset_bottom = 484.0
+theme_override_font_sizes/font_size = 45
+text = "Correlate
+"
+
+[node name="Pillbottle" type="Sprite2D" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect2" unique_id=2057886201]
+position = Vector2(144.00006, 244)
+scale = Vector2(0.08882652, 0.092936195)
+texture = ExtResource("6_akp0n")
+
+[node name="TextureRect3" type="TextureRect" parent="Evidence/Gathered/ScrollContainer/VBoxContainer" unique_id=353473007]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+texture = ExtResource("4_ju1kl")
+stretch_mode = 1
+
+[node name="Title" type="Label" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect3" unique_id=1573930944]
+layout_mode = 0
+offset_left = 316.0
+offset_top = 40.0
+offset_right = 976.0
+offset_bottom = 209.0
+theme_override_font_sizes/font_size = 60
+text = "Torn Journal Page"
+
+[node name="Description" type="Label" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect3" unique_id=1218046250]
+layout_mode = 0
+offset_left = 262.0
+offset_top = 155.0
+offset_right = 1063.0
+offset_bottom = 387.0
+theme_override_font_sizes/font_size = 40
+text = "A page has been removed physically
+removed from a journal. The jagged edge
+suggests it was torn in agitation, not
+carefully removed. What it contained
+Is unknown"
+
+[node name="Button" type="Button" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect3" unique_id=1624254363]
+layout_mode = 0
+offset_left = 808.0
+offset_top = 388.0
+offset_right = 1057.0
+offset_bottom = 484.0
+theme_override_font_sizes/font_size = 45
+text = "Correlate
+"
+
+[node name="Journal" type="Sprite2D" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect3" unique_id=1318867187]
+position = Vector2(134, 239)
+scale = Vector2(0.056662325, 0.0741635)
+texture = ExtResource("7_hwre7")
+
+[node name="TextureRect4" type="TextureRect" parent="Evidence/Gathered/ScrollContainer/VBoxContainer" unique_id=571669996]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+texture = ExtResource("4_ju1kl")
+stretch_mode = 1
+
+[node name="Title" type="Label" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect4" unique_id=754017190]
+layout_mode = 0
+offset_left = 316.0
+offset_top = 40.0
+offset_right = 976.0
+offset_bottom = 209.0
+theme_override_font_sizes/font_size = 60
+text = "Newspaper"
+
+[node name="Description" type="Label" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect4" unique_id=741319079]
+layout_mode = 0
+offset_left = 262.0
+offset_top = 155.0
+offset_right = 1063.0
+offset_bottom = 387.0
+theme_override_font_sizes/font_size = 40
+text = "Partially obscured, lying on the floor.
+References an unsolved incident from
+years ago. Edmund's name does not
+appear - but the details match what
+he'd have witnessed"
+
+[node name="Button" type="Button" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect4" unique_id=903908682]
+layout_mode = 0
+offset_left = 808.0
+offset_top = 388.0
+offset_right = 1057.0
+offset_bottom = 484.0
+theme_override_font_sizes/font_size = 45
+text = "Correlate
+"
+
+[node name="Newspaper" type="Sprite2D" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect4" unique_id=1949670318]
+position = Vector2(137.96864, 232.09378)
+scale = Vector2(0.8434089, 0.9627724)
+texture = ExtResource("8_lwycs")
+
+[node name="TextureRect5" type="TextureRect" parent="Evidence/Gathered/ScrollContainer/VBoxContainer" unique_id=586857087]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+texture = ExtResource("4_ju1kl")
+stretch_mode = 1
+
+[node name="Title" type="Label" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect5" unique_id=106103630]
+layout_mode = 0
+offset_left = 316.0
+offset_top = 40.0
+offset_right = 976.0
+offset_bottom = 209.0
+theme_override_font_sizes/font_size = 60
+text = "Music Sheet"
+
+[node name="Description" type="Label" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect5" unique_id=1890606042]
+layout_mode = 0
+offset_left = 262.0
+offset_top = 155.0
+offset_right = 1063.0
+offset_bottom = 387.0
+theme_override_font_sizes/font_size = 40
+text = "Folded inside the piano bench. On the 
+back of the sheet music was enscribed
+\"I should've said something. Im sorry.
+Im sorry.\""
+
+[node name="Button" type="Button" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect5" unique_id=515109041]
+layout_mode = 0
+offset_left = 808.0
+offset_top = 388.0
+offset_right = 1057.0
+offset_bottom = 484.0
+theme_override_font_sizes/font_size = 45
+text = "Correlate
+"
+
+[node name="MusicSheet" type="Sprite2D" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect5" unique_id=1710105625]
+position = Vector2(136, 203)
+texture = ExtResource("9_l2grt")
+
+[node name="TextureRect6" type="TextureRect" parent="Evidence/Gathered/ScrollContainer/VBoxContainer" unique_id=1540589039]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+texture = ExtResource("4_ju1kl")
+stretch_mode = 1
+
+[node name="Title" type="Label" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect6" unique_id=1944874181]
+layout_mode = 0
+offset_left = 316.0
+offset_top = 40.0
+offset_right = 976.0
+offset_bottom = 209.0
+theme_override_font_sizes/font_size = 60
+text = "Purple Flower"
+
+[node name="Description" type="Label" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect6" unique_id=1175840697]
+layout_mode = 0
+offset_left = 237.0
+offset_top = 133.0
+offset_right = 1057.0
+offset_bottom = 365.0
+theme_override_font_sizes/font_size = 40
+text = "On the kitchen windowsill - an ornamental
+plant, common enough that it's presence
+alone is unremarkable. Several leaves have
+been recently stripped from lower stems."
+
+[node name="Button" type="Button" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect6" unique_id=1624396393]
+layout_mode = 0
+offset_left = 808.0
+offset_top = 388.0
+offset_right = 1057.0
+offset_bottom = 484.0
+theme_override_font_sizes/font_size = 45
+text = "Correlate
+"
+
+[node name="MusicSheet" type="Sprite2D" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect6" unique_id=1840701292]
+position = Vector2(110.12512, 236.87498)
+scale = Vector2(0.29272464, 0.22932939)
+texture = ExtResource("10_l2grt")
+
+[node name="TextureRect7" type="TextureRect" parent="Evidence/Gathered/ScrollContainer/VBoxContainer" unique_id=399064210]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+texture = ExtResource("4_ju1kl")
+stretch_mode = 1
+
+[node name="Title" type="Label" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect7" unique_id=1672503601]
+layout_mode = 0
+offset_left = 316.0
+offset_top = 40.0
+offset_right = 976.0
+offset_bottom = 209.0
+theme_override_font_sizes/font_size = 60
+text = "Desk Planner"
+
+[node name="Description" type="Label" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect7" unique_id=1351221258]
+layout_mode = 0
+offset_left = 237.0
+offset_top = 133.0
+offset_right = 1057.0
+offset_bottom = 365.0
+theme_override_font_sizes/font_size = 40
+text = "A small desk planner left open on the table.
+A date five days after his death is circled
+and marled with his son's first name and
+a time."
+
+[node name="Button" type="Button" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect7" unique_id=919180756]
+layout_mode = 0
+offset_left = 808.0
+offset_top = 388.0
+offset_right = 1057.0
+offset_bottom = 484.0
+theme_override_font_sizes/font_size = 45
+text = "Correlate
+"
+
+[node name="MusicSheet" type="Sprite2D" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect7" unique_id=493361982]
+position = Vector2(126.99997, 243.99997)
+scale = Vector2(0.26269525, 0.20963539)
+texture = ExtResource("11_iuqmw")
+
+[node name="TextureRect8" type="TextureRect" parent="Evidence/Gathered/ScrollContainer/VBoxContainer" unique_id=1109725477]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+texture = ExtResource("4_ju1kl")
+stretch_mode = 1
+
+[node name="Title" type="Label" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect8" unique_id=1736431000]
+layout_mode = 0
+offset_left = 316.0
+offset_top = 40.0
+offset_right = 976.0
+offset_bottom = 209.0
+theme_override_font_sizes/font_size = 60
+text = "Appointment Card"
+
+[node name="Description" type="Label" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect8" unique_id=1330233760]
+layout_mode = 0
+offset_left = 237.0
+offset_top = 133.0
+offset_right = 1057.0
+offset_bottom = 365.0
+theme_override_font_sizes/font_size = 40
+text = "A card for a doctor's appointment 
+scheduled for days after Edmund's death."
+
+[node name="Button" type="Button" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect8" unique_id=241718348]
+layout_mode = 0
+offset_left = 808.0
+offset_top = 388.0
+offset_right = 1057.0
+offset_bottom = 484.0
+theme_override_font_sizes/font_size = 45
+text = "Correlate
+"
+
+[node name="MusicSheet" type="Sprite2D" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect8" unique_id=733010406]
+position = Vector2(115.499954, 255.00009)
+scale = Vector2(0.24442181, 0.26119405)
+texture = ExtResource("17_2g1uf")
+
+[node name="TextureRect9" type="TextureRect" parent="Evidence/Gathered/ScrollContainer/VBoxContainer" unique_id=157808093]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+texture = ExtResource("4_ju1kl")
+stretch_mode = 1
+
+[node name="Title" type="Label" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect9" unique_id=742633411]
+layout_mode = 0
+offset_left = 316.0
+offset_top = 40.0
+offset_right = 976.0
+offset_bottom = 209.0
+theme_override_font_sizes/font_size = 60
+text = "Foreign Handwriting"
+
+[node name="Description" type="Label" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect9" unique_id=1228631615]
+layout_mode = 0
+offset_left = 237.0
+offset_top = 133.0
+offset_right = 1057.0
+offset_bottom = 365.0
+theme_override_font_sizes/font_size = 40
+text = "A single line written in the journal's margin
+in a handwriting that is not Edmund's - a
+date, followed by two words: \"You 
+Promised\" placed in the last full entry
+before the torn page."
+
+[node name="Button" type="Button" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect9" unique_id=1423949833]
+layout_mode = 0
+offset_left = 808.0
+offset_top = 388.0
+offset_right = 1057.0
+offset_bottom = 484.0
+theme_override_font_sizes/font_size = 45
+text = "Correlate
+"
+
+[node name="MusicSheet" type="Sprite2D" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect9" unique_id=749143393]
+position = Vector2(126.00006, 230.99995)
+scale = Vector2(0.21247475, 0.2503732)
+texture = ExtResource("18_8r704")
+
+[node name="TextureRect10" type="TextureRect" parent="Evidence/Gathered/ScrollContainer/VBoxContainer" unique_id=915411588]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+texture = ExtResource("4_ju1kl")
+stretch_mode = 1
+
+[node name="Title" type="Label" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect10" unique_id=521356305]
+layout_mode = 0
+offset_left = 316.0
+offset_top = 40.0
+offset_right = 976.0
+offset_bottom = 209.0
+theme_override_font_sizes/font_size = 60
+text = "Journal Entry (3 days ago)"
+
+[node name="Description" type="Label" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect10" unique_id=1634816354]
+layout_mode = 0
+offset_left = 237.0
+offset_top = 133.0
+offset_right = 1057.0
+offset_bottom = 365.0
+theme_override_font_sizes/font_size = 40
+text = "Describes a phone call that left Edmun
+shaken. Caller not named. Edmund writes
+that he has \"no more to say\" and that \"it
+is already done.\""
+
+[node name="Button" type="Button" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect10" unique_id=1288728672]
+layout_mode = 0
+offset_left = 808.0
+offset_top = 388.0
+offset_right = 1057.0
+offset_bottom = 484.0
+theme_override_font_sizes/font_size = 45
+text = "Correlate
+"
+
+[node name="MusicSheet" type="Sprite2D" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect10" unique_id=1569377551]
+position = Vector2(120.99995, 227.00002)
+scale = Vector2(0.24637666, 0.30778304)
+texture = ExtResource("19_8r704")
+
+[node name="TextureRect11" type="TextureRect" parent="Evidence/Gathered/ScrollContainer/VBoxContainer" unique_id=570113936]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+texture = ExtResource("4_ju1kl")
+stretch_mode = 1
+
+[node name="Title" type="Label" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect11" unique_id=403455524]
+layout_mode = 0
+offset_left = 316.0
+offset_top = 40.0
+offset_right = 976.0
+offset_bottom = 209.0
+theme_override_font_sizes/font_size = 60
+text = "Loose-Leaf Tea Tin"
+
+[node name="Description" type="Label" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect11" unique_id=869668152]
+layout_mode = 0
+offset_left = 237.0
+offset_top = 133.0
+offset_right = 1057.0
+offset_bottom = 365.0
+theme_override_font_sizes/font_size = 40
+text = "Half-empty tin of loose leaf tea. Forensic
+analysis would reeal traces of digitalis
+glycoside in the remaining leaves.
+Suggests tampering prior to Edmund's
+use"
+
+[node name="Button" type="Button" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect11" unique_id=527126063]
+layout_mode = 0
+offset_left = 808.0
+offset_top = 388.0
+offset_right = 1057.0
+offset_bottom = 484.0
+theme_override_font_sizes/font_size = 45
+text = "Correlate
+"
+
+[node name="MusicSheet" type="Sprite2D" parent="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect11" unique_id=502167302]
+position = Vector2(108.00012, 254.99997)
+scale = Vector2(0.17513034, 0.19042969)
+texture = ExtResource("8_m84hj")
+
+[node name="Hint" type="Node2D" parent="." unique_id=991297132]
+visible = false
+
+[node name="AddCircleSvgrepoCom(1)" type="Sprite2D" parent="Hint" unique_id=1288448481]
+texture_filter = 1
+position = Vector2(1894.9999, 614)
+scale = Vector2(0.5566229, 0.54166645)
+texture = ExtResource("5_akp0n")
+
+[node name="AddCircleSvgrepoCom(1)2" type="Sprite2D" parent="Hint" unique_id=1292258626]
+position = Vector2(1183.9998, 1178)
+scale = Vector2(0.5566229, 0.54166645)
+texture = ExtResource("5_akp0n")
+
+[node name="AddCircleSvgrepoCom(1)3" type="Sprite2D" parent="Hint" unique_id=1467651635]
+position = Vector2(2405, 1169)
+scale = Vector2(0.5566229, 0.54166645)
+texture = ExtResource("5_akp0n")
+
+[node name="AddCircleSvgrepoCom(1)4" type="Sprite2D" parent="Hint" unique_id=1928814702]
+position = Vector2(2553, 1167)
+scale = Vector2(0.5566229, 0.54166645)
+texture = ExtResource("5_akp0n")
+
+[node name="AddCircleSvgrepoCom(1)5" type="Sprite2D" parent="Hint" unique_id=1800434820]
+position = Vector2(2708, 1185)
+scale = Vector2(0.5566229, 0.54166645)
+texture = ExtResource("5_akp0n")
+
+[node name="AddCircleSvgrepoCom(1)6" type="Sprite2D" parent="Hint" unique_id=2017378980]
+position = Vector2(2509.9998, 1310)
+scale = Vector2(0.5566229, 0.54166645)
+texture = ExtResource("5_akp0n")
+
+[node name="AddCircleSvgrepoCom(1)7" type="Sprite2D" parent="Hint" unique_id=585166514]
+position = Vector2(2938, 1235)
+scale = Vector2(0.5566229, 0.54166645)
+texture = ExtResource("5_akp0n")
+
+[node name="AddCircleSvgrepoCom(1)8" type="Sprite2D" parent="Hint" unique_id=1769137788]
+position = Vector2(633.9999, 919.00006)
+scale = Vector2(0.5566229, 0.54166645)
+texture = ExtResource("5_akp0n")
+
+[node name="AddCircleSvgrepoCom(1)9" type="Sprite2D" parent="Hint" unique_id=697752828]
+position = Vector2(99.999985, 578)
+scale = Vector2(0.5566229, 0.54166645)
+texture = ExtResource("5_akp0n")
+
+[node name="AddCircleSvgrepoCom(1)10" type="Sprite2D" parent="Hint" unique_id=1426834104]
+position = Vector2(2170, 222.00003)
+scale = Vector2(0.5566229, 0.54166645)
+texture = ExtResource("5_akp0n")
+
+[node name="AddCircleSvgrepoCom(1)11" type="Sprite2D" parent="Hint" unique_id=1139643327]
+position = Vector2(1449, 1395.0001)
+scale = Vector2(0.5566229, 0.54166645)
+texture = ExtResource("5_akp0n")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="UI_Display/Black_Exit" to="." method="clean_all"]
+[connection signal="pressed" from="UI_Display/Evidence" to="." method="display_evidence"]
+[connection signal="input_event" from="Interactable_Areas/TeaCup_Area" to="." method="_treaCup_view"]
+[connection signal="mouse_entered" from="Interactable_Areas/TeaCup_Area" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Interactable_Areas/TeaCup_Area" to="." method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Interactable_Areas/TeaTin_Area" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Interactable_Areas/TeaTin_Area" to="." method="_on_mouse_exited"]
+[connection signal="input_event" from="Interactable_Areas/Journal_Area" to="." method="_journal_view"]
+[connection signal="mouse_entered" from="Interactable_Areas/Journal_Area" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Interactable_Areas/Journal_Area" to="." method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Interactable_Areas/TornPage_Area" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Interactable_Areas/TornPage_Area" to="." method="_on_mouse_exited"]
+[connection signal="input_event" from="Interactable_Areas/PillBottle_Area" to="." method="_pillBottle_view"]
+[connection signal="mouse_entered" from="Interactable_Areas/PillBottle_Area" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Interactable_Areas/PillBottle_Area" to="." method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Interactable_Areas/Note_Area" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Interactable_Areas/Note_Area" to="." method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Interactable_Areas/NewsPaper_Area" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Interactable_Areas/NewsPaper_Area" to="." method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Interactable_Areas/Journal2_Area" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Interactable_Areas/Journal2_Area" to="." method="_on_mouse_exited"]
+[connection signal="input_event" from="Interactable_Areas/Foxglove_Area" to="." method="_foxglove_view"]
+[connection signal="mouse_entered" from="Interactable_Areas/Foxglove_Area" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Interactable_Areas/Foxglove_Area" to="." method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Interactable_Areas/FramedPhoto_Area" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Interactable_Areas/FramedPhoto_Area" to="." method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Interactable_Areas/UnopenedLetter_Area" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Interactable_Areas/UnopenedLetter_Area" to="." method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Interactable_Areas/CrossWord_Area" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Interactable_Areas/CrossWord_Area" to="." method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Interactable_Areas/MusicSheet_Area" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Interactable_Areas/MusicSheet_Area" to="." method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Interactable_Areas/MusicTheory_Area" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Interactable_Areas/MusicTheory_Area" to="." method="_on_mouse_exited"]
+[connection signal="input_event" from="Interactable_Areas/DeskPlanner_area" to="." method="_deskPlanner_view"]
+[connection signal="mouse_entered" from="Interactable_Areas/DeskPlanner_area" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Interactable_Areas/DeskPlanner_area" to="." method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Interactable_Areas/Appointment_Area" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Interactable_Areas/Appointment_Area" to="." method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Interactable_Areas/Phone_Area" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Interactable_Areas/Phone_Area" to="." method="_on_mouse_exited"]
+[connection signal="pressed" from="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect/Button" to="." method="tea_cup_card"]
+[connection signal="pressed" from="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect2/Button" to="." method="pill_bottle_card"]
+[connection signal="pressed" from="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect3/Button" to="." method="torn_page_card"]
+[connection signal="pressed" from="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect6/Button" to="." method="foxglove_card"]
+[connection signal="pressed" from="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect7/Button" to="." method="deskPlanner_card"]
+[connection signal="pressed" from="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect8/Button" to="." method="appointment_card"]
+[connection signal="pressed" from="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect10/Button" to="." method="journal_entry_card"]
+[connection signal="pressed" from="Evidence/Gathered/ScrollContainer/VBoxContainer/TextureRect11/Button" to="." method="teaTin_card"]
